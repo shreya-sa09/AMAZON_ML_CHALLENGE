@@ -45,3 +45,6 @@ Thumbs.db
 cache/
 output/
 *_submission.zip
+
+student_resource/
+__MACOSX/
