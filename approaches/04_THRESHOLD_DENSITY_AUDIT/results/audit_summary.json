@@ -1,0 +1,106 @@
+{
+  "checks": {
+    "k1_equals_plain": true,
+    "accepted_decoy_links_at_0.7": 4046,
+    "k2_added_rows": 4046,
+    "k2_added_rows_equals_decoys": true,
+    "k2_true_positives_unchanged": true,
+    "k2_tp_identical_per_entity": true,
+    "k2_npred_never_decreases": true
+  },
+  "test_density": {
+    "train": {
+      "records_per_s1": 4.676509331749154,
+      "decoy_share": 0.259864059086343,
+      "decoys_per_s1": 1.2152566973034968
+    },
+    "test": [
+      {
+        "country": "India",
+        "records_per_s1": 5.8242549871232345,
+        "accept_rate_0.7": 0.5775950092897502,
+        "est_decoy_share": 0.40522987263326016,
+        "est_decoys_per_s1": 2.3601621066155785
+      },
+      {
+        "country": "France",
+        "records_per_s1": 5.530861199759493,
+        "accept_rate_0.7": 0.6144615339587023,
+        "est_decoy_share": 0.36676915977166435,
+        "est_decoys_per_s1": 2.0285493150494887
+      },
+      {
+        "country": "US",
+        "records_per_s1": 5.756290849426788,
+        "accept_rate_0.7": 0.5871246526423286,
+        "est_decoy_share": 0.3952881469092294,
+        "est_decoys_per_s1": 2.2753935429404692
+      }
+    ],
+    "val_record_recall_0.7": 0.9660281917372833,
+    "val_decoy_accept_0.7": 0.0074779744904129725
+  },
+  "submissions": [
+    {
+      "threshold": 0.5,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.50.tsv",
+      "matched_records": 5901733,
+      "s1_with_match": 1635114,
+      "empty_s1": 97430,
+      "matched_US": 2256097,
+      "matched_France": 896776,
+      "matched_India": 2748860
+    },
+    {
+      "threshold": 0.6,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.60.tsv",
+      "matched_records": 5873333,
+      "s1_with_match": 1633959,
+      "empty_s1": 98585,
+      "matched_US": 2248061,
+      "matched_France": 888788,
+      "matched_India": 2736484
+    },
+    {
+      "threshold": 0.65,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.65.tsv",
+      "matched_records": 5860476,
+      "s1_with_match": 1633408,
+      "empty_s1": 99136,
+      "matched_India": 2730660,
+      "matched_US": 2244664,
+      "matched_France": 885152
+    },
+    {
+      "threshold": 0.7,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.70.tsv",
+      "matched_records": 5847663,
+      "s1_with_match": 1632933,
+      "empty_s1": 99611,
+      "matched_US": 2241073,
+      "matched_India": 2724842,
+      "matched_France": 881748
+    },
+    {
+      "threshold": 0.75,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.75.tsv",
+      "matched_records": 5833442,
+      "s1_with_match": 1632394,
+      "empty_s1": 100150,
+      "matched_India": 2718634,
+      "matched_France": 877955,
+      "matched_US": 2236853
+    },
+    {
+      "threshold": 0.8,
+      "file": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\04_THRESHOLD_DENSITY_AUDIT\\output\\matching_results_t0.80.tsv",
+      "matched_records": 5816816,
+      "s1_with_match": 1631735,
+      "empty_s1": 100809,
+      "matched_US": 2231390,
+      "matched_India": 2711657,
+      "matched_France": 873769
+    }
+  ],
+  "runtime_sec": 60
+}
