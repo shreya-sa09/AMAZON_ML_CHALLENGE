@@ -1,0 +1,36 @@
+[      0s] FINAL: learn on all training folds, predict test
+[      8s] token TE learned from 4,646,269 rows: 666,263 query-only / 74,839 S1-only tokens
+[      9s] token TE learned from 4,642,863 rows: 665,776 query-only / 74,587 S1-only tokens
+[     10s] final_train_rows_h0_cf1_ru0: computing edit features for 1,200,695 top-1 pairs
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:135: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat([df.select(*["f_" + c for c in PAIR_FEATURES]), ef], how="horizontal")
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:113: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat(parts, how="horizontal").with_columns((pl.col("p1") - pl.col("p2")).alias("gap"))
+[     59s] final_train_rows_h1_cf1_ru0: computing edit features for 1,202,672 top-1 pairs
+[    111s] token TE learned from 9,289,132 rows: 1,215,363 query-only / 91,847 S1-only tokens
+Training until validation scores don't improve for 100 rounds
+[250]	es's binary_logloss: 0.121895
+[500]	es's binary_logloss: 0.114331
+[750]	es's binary_logloss: 0.111476
+[1000]	es's binary_logloss: 0.109599
+[1250]	es's binary_logloss: 0.108038
+[1500]	es's binary_logloss: 0.106973
+[1750]	es's binary_logloss: 0.106176
+[2000]	es's binary_logloss: 0.105462
+[2250]	es's binary_logloss: 0.10483
+[2500]	es's binary_logloss: 0.104175
+[2750]	es's binary_logloss: 0.103829
+[3000]	es's binary_logloss: 0.103487
+[3250]	es's binary_logloss: 0.10317
+[3500]	es's binary_logloss: 0.102905
+[3750]	es's binary_logloss: 0.102699
+[4000]	es's binary_logloss: 0.102587
+[4250]	es's binary_logloss: 0.102459
+[4500]	es's binary_logloss: 0.102368
+Early stopping, best iteration is:
+[4420]	es's binary_logloss: 0.102363
+[    452s] model stage2_final_model_cf1_ru0_r8000.txt: best_iteration 4420
+[    457s] final_test_rows_cf1_ru0: computing edit features for 3,388,375 top-1 pairs
+[    789s] wrote C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\output\matching_results.tsv: 5,901,733 matched records over 1,635,114/1,732,544 S1 (stage 1 alone: 5,971,426)

@@ -1,0 +1,39 @@
+{
+  "baseline": {
+    "run": "baseline_stage1",
+    "threshold": 0.7,
+    "f05": 0.9782439862345759,
+    "precision": 0.9886024534863561,
+    "recall": 0.9549602413740145,
+    "singleton_acc": 0.9805295315682281,
+    "fp_singleton": 478,
+    "predictions": 1471539,
+    "empty_s1": 26193,
+    "f05_India": 0.9755219852809399,
+    "f05_US": 0.9800653916723917
+  },
+  "stage2_at_threshold": {
+    "run": "stage2",
+    "threshold": 0.7,
+    "f05": 0.9854992673687867,
+    "precision": 0.99349442915122,
+    "recall": 0.9665073127881203,
+    "singleton_acc": 0.9886354378818737,
+    "fp_singleton": 279,
+    "predictions": 1483032,
+    "empty_s1": 25559,
+    "f05_India": 0.9854294793720296,
+    "f05_US": 0.9855459654555808
+  },
+  "delta_f05": 0.0072552811342108114,
+  "auc_band_p1": 0.9706245669033464,
+  "auc_band_stage2": 0.992283107431959,
+  "variant": "cf1_ru1",
+  "cross_fit_te": true,
+  "runner_up": true,
+  "train_rows": 1921682,
+  "val_band_rows": 534915,
+  "smoke": false,
+  "best_iteration": 3000,
+  "runtime_sec": 719
+}

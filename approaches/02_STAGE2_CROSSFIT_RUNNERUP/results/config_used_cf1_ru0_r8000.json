@@ -1,0 +1,39 @@
+{
+  "approach": "02_STAGE2_CROSSFIT_RUNNERUP",
+  "seed": 42,
+  "band_lo": 0.002,
+  "band_hi": 0.995,
+  "threshold": 0.5,
+  "report_thresholds": [
+    0.5,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8
+  ],
+  "te_smoothing": 20,
+  "production_train_hash_cut": 100,
+  "lgbm": {
+    "objective": "binary",
+    "learning_rate": 0.05,
+    "num_leaves": 127,
+    "min_data_in_leaf": 100,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "verbose": -1,
+    "num_threads": 16
+  },
+  "max_rounds": 8000,
+  "early_stopping": 100,
+  "categorical": [
+    "e_hn_edit",
+    "e_hn2_edit",
+    "r2_e_hn_edit",
+    "r2_e_hn2_edit"
+  ],
+  "cross_fit_te": true,
+  "runner_up": false,
+  "variant": "cf1_ru0_r8000"
+}

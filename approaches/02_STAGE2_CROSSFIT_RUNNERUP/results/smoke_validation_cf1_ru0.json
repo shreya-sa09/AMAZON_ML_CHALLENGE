@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "run": "baseline_stage1",
+    "threshold": 0.7,
+    "f05": 0.9782439862345759,
+    "precision": 0.9886024534863561,
+    "recall": 0.9549602413740145,
+    "singleton_acc": 0.9805295315682281,
+    "fp_singleton": 478,
+    "predictions": 1471539,
+    "empty_s1": 26193,
+    "f05_India": 0.9755219852809399,
+    "f05_US": 0.9800653916723917
+  },
+  "stage2_at_threshold": {
+    "run": "stage2",
+    "threshold": 0.7,
+    "f05": 0.978494115233548,
+    "precision": 0.9887889489786899,
+    "recall": 0.9553054212017656,
+    "singleton_acc": 0.9810183299389003,
+    "fp_singleton": 466,
+    "predictions": 1471816,
+    "empty_s1": 26191,
+    "f05_India": 0.975858066250511,
+    "f05_US": 0.9802580065891474
+  },
+  "delta_f05": 0.00025012899897214336,
+  "auc_band_p1": 0.9702411438862651,
+  "auc_band_stage2": 0.9811693393734916,
+  "variant": "cf1_ru0",
+  "max_rounds": 3000,
+  "cross_fit_te": true,
+  "runner_up": false,
+  "train_rows": 100000,
+  "val_band_rows": 50000,
+  "smoke": true,
+  "best_iteration": 50,
+  "runtime_sec": 44
+}

@@ -1,0 +1,16 @@
+{
+  "threshold": 0.5,
+  "test_band_rows": 3388375,
+  "matched_records": 5901733,
+  "stage1_matched_records": 5971426,
+  "s1_rows": 1732544,
+  "s1_with_match": 1635114,
+  "per_country": {
+    "India": 2748860,
+    "US": 2256097,
+    "France": 896776
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\02_STAGE2_CROSSFIT_RUNNERUP\\output",
+  "smoke": false,
+  "runtime_sec": 789
+}

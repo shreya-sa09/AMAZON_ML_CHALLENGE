@@ -1,0 +1,38 @@
+[      0s] VALIDATE: learn on fold A, score fold B
+[      7s] token TE learned from 3,715,008 rows: 546,801 query-only / 68,386 S1-only tokens
+[      8s] token TE learned from 3,713,511 rows: 546,344 query-only / 68,297 S1-only tokens
+[      8s] reuse validate_train_rows_h0_cf1_ru0.parquet
+[      8s] reuse validate_train_rows_h1_cf1_ru0.parquet
+[     10s] token TE learned from 7,428,519 rows: 1,000,593 query-only / 85,315 S1-only tokens
+[     11s] reuse validate_val_rows_cf1_ru0.parquet
+[     11s] stage-2 train rows 1,921,682, validation band rows 534,915
+Training until validation scores don't improve for 100 rounds
+[250]	es's binary_logloss: 0.121092
+[500]	es's binary_logloss: 0.114757
+[750]	es's binary_logloss: 0.111699
+[1000]	es's binary_logloss: 0.109856
+[1250]	es's binary_logloss: 0.10853
+[1500]	es's binary_logloss: 0.107544
+[1750]	es's binary_logloss: 0.10665
+[2000]	es's binary_logloss: 0.105906
+[2250]	es's binary_logloss: 0.105325
+[2500]	es's binary_logloss: 0.104758
+[2750]	es's binary_logloss: 0.104289
+[3000]	es's binary_logloss: 0.10402
+[3250]	es's binary_logloss: 0.103739
+[3500]	es's binary_logloss: 0.103491
+[3750]	es's binary_logloss: 0.103378
+[4000]	es's binary_logloss: 0.103295
+[4250]	es's binary_logloss: 0.103198
+[4500]	es's binary_logloss: 0.103008
+Early stopping, best iteration is:
+[4460]	es's binary_logloss: 0.102991
+[    279s] model stage2_validation_model_cf1_ru0_r8000.txt: best_iteration 4460
+[    306s] validation band AUC: stage-1 p1 0.9706 -> stage-2 0.9925
+[    310s] t=0.5: F0.5 0.985908 (P 0.9927 R 0.9701) delta vs baseline +0.007664
+[    313s] t=0.6: F0.5 0.985891 (P 0.9933 R 0.9686) delta vs baseline +0.007647
+[    316s] t=0.65: F0.5 0.985850 (P 0.9935 R 0.9678) delta vs baseline +0.007606
+[    320s] t=0.7: F0.5 0.985690 (P 0.9936 R 0.9668) delta vs baseline +0.007446
+[    323s] t=0.75: F0.5 0.985446 (P 0.9937 R 0.9657) delta vs baseline +0.007202
+[    326s] t=0.8: F0.5 0.985050 (P 0.9938 R 0.9642) delta vs baseline +0.006806
+[    326s] VALIDATION F0.5 @ 0.7: 0.985690 (baseline 0.978244, delta +0.007446)

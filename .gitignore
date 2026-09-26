@@ -48,3 +48,10 @@ output/
 
 student_resource/
 __MACOSX/
+
+# Challenge outputs - keep locally, do not push
+approaches/**/output/*.tsv
+approaches/**/cache/
+*.parquet
+*.pkl
+*.joblib

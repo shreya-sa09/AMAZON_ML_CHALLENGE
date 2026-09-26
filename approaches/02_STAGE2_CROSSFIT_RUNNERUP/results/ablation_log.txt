@@ -1,0 +1,79 @@
+[      0s] VALIDATE: learn on fold A, score fold B
+[      8s] token TE learned from 3,715,008 rows: 546,801 query-only / 68,386 S1-only tokens
+[      9s] token TE learned from 3,713,511 rows: 546,344 query-only / 68,297 S1-only tokens
+[      9s] validate_train_rows_h0_cf1_ru0: computing edit features for 960,432 top-1 pairs
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:128: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat([df.select(*["f_" + c for c in PAIR_FEATURES]), ef], how="horizontal")
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:106: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat(parts, how="horizontal").with_columns((pl.col("p1") - pl.col("p2")).alias("gap"))
+[     44s] validate_train_rows_h1_cf1_ru0: computing edit features for 961,250 top-1 pairs
+[     80s] token TE learned from 7,428,519 rows: 1,000,593 query-only / 85,315 S1-only tokens
+[     81s] validate_val_rows_cf1_ru0: computing edit features for 534,915 top-1 pairs
+[    104s] stage-2 train rows 1,921,682, validation band rows 534,915
+Training until validation scores don't improve for 100 rounds
+[250]	es's binary_logloss: 0.121092
+[500]	es's binary_logloss: 0.114757
+[750]	es's binary_logloss: 0.111699
+[1000]	es's binary_logloss: 0.109856
+[1250]	es's binary_logloss: 0.10853
+[1500]	es's binary_logloss: 0.107544
+[1750]	es's binary_logloss: 0.10665
+[2000]	es's binary_logloss: 0.105906
+[2250]	es's binary_logloss: 0.105325
+[2500]	es's binary_logloss: 0.104758
+[2750]	es's binary_logloss: 0.104289
+[3000]	es's binary_logloss: 0.10402
+Did not meet early stopping. Best iteration is:
+[3000]	es's binary_logloss: 0.10402
+[    300s] model stage2_validation_model_cf1_ru0.txt: best_iteration 3000
+[    316s] validation band AUC: stage-1 p1 0.9706 -> stage-2 0.9924
+[    320s] t=0.5: F0.5 0.985814 (P 0.9927 R 0.9700) delta vs baseline +0.007570
+[    321s] t=0.6: F0.5 0.985828 (P 0.9932 R 0.9684) delta vs baseline +0.007584
+[    323s] t=0.65: F0.5 0.985729 (P 0.9934 R 0.9675) delta vs baseline +0.007485
+[    324s] t=0.7: F0.5 0.985615 (P 0.9936 R 0.9666) delta vs baseline +0.007371
+[    326s] t=0.75: F0.5 0.985320 (P 0.9937 R 0.9653) delta vs baseline +0.007076
+[    327s] t=0.8: F0.5 0.984900 (P 0.9938 R 0.9637) delta vs baseline +0.006656
+[    327s] VALIDATION F0.5 @ 0.7: 0.985615 (baseline 0.978244, delta +0.007371)
+[      0s] VALIDATE: learn on fold A, score fold B
+[      9s] token TE learned from 3,715,008 rows: 546,801 query-only / 68,386 S1-only tokens
+[     10s] token TE learned from 3,713,511 rows: 546,344 query-only / 68,297 S1-only tokens
+[     10s] validate_train_rows_h0_cf1_ru1: computing edit features for 960,432 top-1 pairs
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:128: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat([df.select(*["f_" + c for c in PAIR_FEATURES]), ef], how="horizontal")
+[     54s] validate_train_rows_h0_cf1_ru1: computing edit features for 960,432 runner-up pairs
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\02_STAGE2_CROSSFIT_RUNNERUP\src\stage2.py:106: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  out = pl.concat(parts, how="horizontal").with_columns((pl.col("p1") - pl.col("p2")).alias("gap"))
+[    106s] validate_train_rows_h1_cf1_ru1: computing edit features for 961,250 top-1 pairs
+[    142s] validate_train_rows_h1_cf1_ru1: computing edit features for 961,250 runner-up pairs
+[    189s] token TE learned from 7,428,519 rows: 1,000,593 query-only / 85,315 S1-only tokens
+[    190s] validate_val_rows_cf1_ru1: computing edit features for 534,915 top-1 pairs
+[    212s] validate_val_rows_cf1_ru1: computing edit features for 534,915 runner-up pairs
+[    246s] stage-2 train rows 1,921,682, validation band rows 534,915
+Training until validation scores don't improve for 100 rounds
+[250]	es's binary_logloss: 0.120959
+[500]	es's binary_logloss: 0.11424
+[750]	es's binary_logloss: 0.111525
+[1000]	es's binary_logloss: 0.109522
+[1250]	es's binary_logloss: 0.108271
+[1500]	es's binary_logloss: 0.107305
+[1750]	es's binary_logloss: 0.106529
+[2000]	es's binary_logloss: 0.106005
+[2250]	es's binary_logloss: 0.105522
+[2500]	es's binary_logloss: 0.105102
+[2750]	es's binary_logloss: 0.104673
+[3000]	es's binary_logloss: 0.104442
+Did not meet early stopping. Best iteration is:
+[3000]	es's binary_logloss: 0.104442
+[    690s] model stage2_validation_model_cf1_ru1.txt: best_iteration 3000
+[    709s] validation band AUC: stage-1 p1 0.9706 -> stage-2 0.9923
+[    713s] t=0.5: F0.5 0.985667 (P 0.9925 R 0.9699) delta vs baseline +0.007423
+[    714s] t=0.6: F0.5 0.985672 (P 0.9931 R 0.9682) delta vs baseline +0.007428
+[    715s] t=0.65: F0.5 0.985608 (P 0.9933 R 0.9674) delta vs baseline +0.007364
+[    716s] t=0.7: F0.5 0.985499 (P 0.9935 R 0.9665) delta vs baseline +0.007255
+[    718s] t=0.75: F0.5 0.985286 (P 0.9937 R 0.9653) delta vs baseline +0.007042
+[    719s] t=0.8: F0.5 0.984819 (P 0.9937 R 0.9637) delta vs baseline +0.006575
+[    719s] VALIDATION F0.5 @ 0.7: 0.985499 (baseline 0.978244, delta +0.007255)

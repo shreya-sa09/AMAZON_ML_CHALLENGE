@@ -1,0 +1,16 @@
+{
+  "threshold": 0.7,
+  "test_band_rows": 50000,
+  "matched_records": 2000,
+  "stage1_matched_records": 5859804,
+  "s1_rows": 1732544,
+  "s1_with_match": 1999,
+  "per_country": {
+    "US": 787,
+    "France": 286,
+    "India": 927
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\02_STAGE2_CROSSFIT_RUNNERUP\\results\\smoke",
+  "smoke": true,
+  "runtime_sec": 81
+}
