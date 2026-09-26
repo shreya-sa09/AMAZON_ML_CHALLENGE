@@ -1,0 +1,76 @@
+{
+  "threshold": 0.7,
+  "groups": {
+    "departement": {
+      "style": "departement",
+      "records": 456002,
+      "accept_before": 0.5943044109455661,
+      "accept_after": 0.609166187867597,
+      "mean_p_before": 0.610458254814148,
+      "mean_p_after": 0.6282800436019897,
+      "stage1_accept_before": 0.619767018565708,
+      "stage1_accept_after": 0.6337252906785497,
+      "top1_changed": 0.03077837377906237,
+      "share_s3": 0.5026973565905413,
+      "name_len": 16.505026293744326,
+      "has_number": 0.9600177192205297
+    },
+    "none": {
+      "style": "none",
+      "records": 500867,
+      "accept_before": 0.6086066760237748,
+      "accept_after": 0.6085607556497035,
+      "mean_p_before": 0.629094123840332,
+      "mean_p_after": 0.6290428638458252,
+      "stage1_accept_before": 0.6215582180499015,
+      "stage1_accept_after": 0.6214623842257525,
+      "top1_changed": 0.00014574727422649126,
+      "share_s3": 0.49777286185753905,
+      "name_len": 16.4122910872547,
+      "has_number": 0.8775762827257535
+    },
+    "region": {
+      "style": "region",
+      "records": 478124,
+      "accept_before": 0.639819377400005,
+      "accept_after": 0.6398005538312237,
+      "mean_p_before": 0.6563372015953064,
+      "mean_p_after": 0.65631103515625,
+      "stage1_accept_before": 0.6533890789836946,
+      "stage1_accept_after": 0.6533618893843438,
+      "top1_changed": 8.575181333712593e-05,
+      "share_s3": 0.5292894730237344,
+      "name_len": 16.359049116965473,
+      "has_number": 0.9622357380093867
+    }
+  },
+  "gap_accept_dep_minus_reg": {
+    "before": -0.045514966454438976,
+    "after": -0.030634365963626675
+  },
+  "gap_mean_p_dep_minus_reg": {
+    "before": -0.04587894678115845,
+    "after": -0.028030991554260254
+  },
+  "gap_stage1_accept_dep_minus_reg": {
+    "before": -0.03362206041798654,
+    "after": -0.01963659870579415
+  },
+  "france_accepted_before": 881748,
+  "france_accepted_after": 888493,
+  "france_records": 1434993,
+  "identity_vs_02_t070": {
+    "India": {
+      "rows": 809986,
+      "identical_share": 1.0
+    },
+    "US": {
+      "rows": 663106,
+      "identical_share": 1.0
+    },
+    "France": {
+      "rows": 259452,
+      "identical_share": 0.9643402247814624
+    }
+  }
+}

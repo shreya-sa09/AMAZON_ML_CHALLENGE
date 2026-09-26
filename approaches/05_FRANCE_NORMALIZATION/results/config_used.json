@@ -1,0 +1,52 @@
+{
+  "approach": "05_FRANCE_NORMALIZATION",
+  "seed": 42,
+  "band_lo": 0.002,
+  "band_hi": 0.995,
+  "threshold": 0.7,
+  "report_thresholds": [
+    0.5,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8
+  ],
+  "te_smoothing": 20,
+  "production_train_hash_cut": 100,
+  "lgbm": {
+    "objective": "binary",
+    "learning_rate": 0.05,
+    "num_leaves": 127,
+    "min_data_in_leaf": 100,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "verbose": -1,
+    "num_threads": 16
+  },
+  "max_rounds": 8000,
+  "early_stopping": 100,
+  "categorical": [
+    "e_hn_edit",
+    "e_hn2_edit",
+    "r2_e_hn_edit",
+    "r2_e_hn2_edit"
+  ],
+  "cross_fit_te": true,
+  "runner_up": false,
+  "france": {
+    "country": "France",
+    "departement_to_region": {
+      "nord": "Hauts-de-France",
+      "pasdecalais": "Hauts-de-France",
+      "gironde": "Nouvelle-Aquitaine",
+      "loireatlantique": "Pays de la Loire"
+    },
+    "leet_min_s1_count": 20,
+    "stage2_model": "cache/imported/stage2_final_model_cf1_ru0_r8000.txt",
+    "stage2_scored_other_countries": "cache/imported/test_final_scored_cf1_ru0_r8000.parquet",
+    "imported_from": "approaches/02_STAGE2_CROSSFIT_RUNNERUP (copied, md5 verified)"
+  },
+  "experiment": "Experiment 2: France normalization only (departement->region, short digit-for-letter repair); threshold 0.70 per Experiment 1; nothing else changed vs 02"
+}
