@@ -1,0 +1,30 @@
+{
+  "policy": {
+    "conf": 0.9,
+    "t_alone": 0.7,
+    "t_group": 0.85,
+    "rule": "threshold = t_group if another record points to the same S1 with p_final >= conf, else t_alone"
+  },
+  "smoke": true,
+  "n_features": 115,
+  "best_iteration": 30,
+  "test_band_rows": 50000,
+  "matched_records": 10936,
+  "test_shift_gate": {
+    "hn_only_uniform0.7": 11605,
+    "v2_uniform0.7": 10936,
+    "v2_policy": 10936,
+    "ate_shift_pct_uniform0.7": -5.764756570443774,
+    "policy_vs_hn_only_pct": -5.764756570443774
+  },
+  "s1_rows": 1732544,
+  "s1_with_match": 10895,
+  "s1_with_candidates": 388827,
+  "per_country": {
+    "India": 5440,
+    "US": 3564,
+    "France": 1932
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_V2_HN_ATE_POLICY\\results\\smoke",
+  "runtime_sec": 18
+}
