@@ -1,0 +1,20 @@
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\19_ANCHOR_SIBLINGS\src\run19.py:44: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  f = pl.concat([rows.select("q_idx"), asib.asib_features(rows, best, qn)], how="horizontal")
+[     8s] asib train: 1,921,682 rows; anchor coverage 0.937
+[    10s] asib val: 534,915 rows; anchor coverage 0.936
+[1000]	es's binary_logloss: 0.0642126
+[   247s] fit model_R6_s42.txt: best_iteration 1853, 236s
+[1000]	es's binary_logloss: 0.0642082
+[2000]	es's binary_logloss: 0.0632396
+[   441s] fit model_R6_s7.txt: best_iteration 2152, 184s
+[   465s] R5_s42: {"plain_u0.7": 0.986726, "plain_ef05": 0.98663, "proxy_ef05": 0.983103, "proxy_ef05_k1.9": 0.983665}
+[   472s] R5_s7: {"plain_u0.7": 0.986766, "plain_ef05": 0.986648, "proxy_ef05": 0.983126, "proxy_ef05_k1.9": 0.983684}
+[   479s] R6_s42: {"plain_u0.7": 0.987993, "plain_ef05": 0.987935, "proxy_ef05": 0.984746, "proxy_ef05_k1.9": 0.985196}
+[   486s] R6_s7: {"plain_u0.7": 0.987987, "plain_ef05": 0.987955, "proxy_ef05": 0.984741, "proxy_ef05_k1.9": 0.985211}
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\19_ANCHOR_SIBLINGS\src\run19.py:106: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  X = pl.concat([X, hn_features(p), ate.apply(p, te), pl.DataFrame({"char_p": ((cps[0] + cps[1]) / 2).astype(np.float32)})], how="horizontal")
+[   802s] asib test: 3,388,375 rows; anchor coverage 0.950
+[   829s] shift val: {"per_country": [{"country": "India", "a5": 99237, "a6": 100304}, {"country": "US", "a5": 97485, "a6": 99533}], "total_R5": 196722, "total_R6": 199837, "R6_vs_R5_pct": 1.583452791248563, "anchor_coverage": 0.9364777581484909, "has_ad_exact_rate": 0.11109054709626763}
+[  1001s] shift test: {"per_country": [{"country": "France", "a5": 112748, "a6": 121044}, {"country": "India", "a5": 443269, "a6": 452513}, {"country": "US", "a5": 242132, "a6": 254973}], "total_R5": 798149, "total_R6": 828530, "R6_vs_R5_pct": 3.806432132346216, "anchor_coverage": 0.9495716973475486, "has_ad_exact_rate": 0.08320596155974472}
