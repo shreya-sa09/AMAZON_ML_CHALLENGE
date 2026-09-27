@@ -1,0 +1,261 @@
+address-present in-band fold-A h0 rows: 860,275; y-rate 0.373
+
+## q_addr_upper
+shape: (16, 5)
+| country | hn_grp | q_addr_upper | n      | y_rate |
+| ---     | ---    | ---          | ---    | ---    |
+| str     | str    | bool         | u32    | f64    |
+|---------|--------|--------------|--------|--------|
+| India   | d=0    | false        | 92969  | 0.616  |
+| India   | d=0    | true         | 10887  | 0.604  |
+| India   | d=1-2  | false        | 22797  | 0.333  |
+| India   | d=1-2  | true         | 3136   | 0.321  |
+| India   | d>2    | false        | 164909 | 0.374  |
+| India   | d>2    | true         | 21807  | 0.373  |
+| India   | na     | false        | 45908  | 0.475  |
+| India   | na     | true         | 5563   | 0.445  |
+| US      | d=0    | false        | 39993  | 0.729  |
+| US      | d=0    | true         | 37567  | 0.744  |
+| US      | d=1-2  | false        | 36574  | 0.203  |
+| US      | d=1-2  | true         | 32473  | 0.208  |
+| US      | d>2    | false        | 175123 | 0.211  |
+| US      | d>2    | true         | 154398 | 0.22   |
+| US      | na     | false        | 8014   | 0.744  |
+| US      | na     | true         | 8157   | 0.747  |
+
+## q_name_upper
+shape: (16, 5)
+| country | hn_grp | q_name_upper | n      | y_rate |
+| ---     | ---    | ---          | ---    | ---    |
+| str     | str    | bool         | u32    | f64    |
+|---------|--------|--------------|--------|--------|
+| India   | d=0    | false        | 86914  | 0.61   |
+| India   | d=0    | true         | 16942  | 0.643  |
+| India   | d=1-2  | false        | 21970  | 0.315  |
+| India   | d=1-2  | true         | 3963   | 0.425  |
+| India   | d>2    | false        | 156972 | 0.369  |
+| India   | d>2    | true         | 29744  | 0.403  |
+| India   | na     | false        | 43929  | 0.472  |
+| India   | na     | true         | 7542   | 0.472  |
+| US      | d=0    | false        | 68605  | 0.736  |
+| US      | d=0    | true         | 8955   | 0.733  |
+| US      | d=1-2  | false        | 62069  | 0.197  |
+| US      | d=1-2  | true         | 6978   | 0.276  |
+| US      | d>2    | false        | 296398 | 0.209  |
+| US      | d>2    | true         | 33123  | 0.267  |
+| US      | na     | false        | 14124  | 0.744  |
+| US      | na     | true         | 2047   | 0.757  |
+
+## same_order
+shape: (16, 5)
+| country | hn_grp | same_order | n      | y_rate |
+| ---     | ---    | ---        | ---    | ---    |
+| str     | str    | bool       | u32    | f64    |
+|---------|--------|------------|--------|--------|
+| India   | d=0    | false      | 19636  | 0.567  |
+| India   | d=0    | true       | 84220  | 0.626  |
+| India   | d=1-2  | false      | 5065   | 0.338  |
+| India   | d=1-2  | true       | 20868  | 0.33   |
+| India   | d>2    | false      | 47275  | 0.415  |
+| India   | d>2    | true       | 139441 | 0.36   |
+| India   | na     | false      | 7076   | 0.32   |
+| India   | na     | true       | 44395  | 0.496  |
+| US      | d=0    | false      | 17513  | 0.722  |
+| US      | d=0    | true       | 60047  | 0.74   |
+| US      | d=1-2  | false      | 16523  | 0.196  |
+| US      | d=1-2  | true       | 52524  | 0.208  |
+| US      | d>2    | false      | 91444  | 0.252  |
+| US      | d>2    | true       | 238077 | 0.201  |
+| US      | na     | false      | 10962  | 0.827  |
+| US      | na     | true       | 5209   | 0.575  |
+
+## comma_diff
+shape: (28, 5)
+| country | hn_grp | comma_diff | n      | y_rate |
+| ---     | ---    | ---        | ---    | ---    |
+| str     | str    | i32        | u32    | f64    |
+|---------|--------|------------|--------|--------|
+| India   | d=0    | -2         | 27368  | 0.693  |
+| India   | d=0    | -1         | 30753  | 0.58   |
+| India   | d=0    | 0          | 40050  | 0.595  |
+| India   | d=0    | 1          | 5487   | 0.585  |
+| India   | d=1-2  | -2         | 4350   | 0.39   |
+| India   | d=1-2  | -1         | 8418   | 0.33   |
+| India   | d=1-2  | 0          | 11903  | 0.315  |
+| India   | d=1-2  | 1          | 1242   | 0.302  |
+| India   | d>2    | -2         | 39749  | 0.408  |
+| India   | d>2    | -1         | 61447  | 0.384  |
+| India   | d>2    | 0          | 76183  | 0.356  |
+| India   | d>2    | 1          | 8921   | 0.331  |
+| India   | na     | -2         | 9735   | 0.587  |
+| India   | na     | -1         | 16056  | 0.452  |
+| India   | na     | 0          | 22587  | 0.442  |
+| India   | na     | 1          | 3001   | 0.44   |
+| US      | d=0    | -1         | 11269  | 0.838  |
+| US      | d=0    | 0          | 60677  | 0.714  |
+| US      | d=0    | 1          | 5613   | 0.769  |
+| US      | d=1-2  | -1         | 5559   | 0.221  |
+| US      | d=1-2  | 0          | 59238  | 0.204  |
+| US      | d=1-2  | 1          | 4250   | 0.202  |
+| US      | d>2    | -1         | 32401  | 0.25   |
+| US      | d>2    | 0          | 273637 | 0.205  |
+| US      | d>2    | 1          | 23483  | 0.289  |
+| US      | na     | -1         | 1740   | 0.81   |
+| US      | na     | 0          | 13652  | 0.741  |
+| US      | na     | 1          | 779    | 0.688  |
+
+## q_unit
+shape: (16, 5)
+| country | hn_grp | q_unit | n      | y_rate |
+| ---     | ---    | ---    | ---    | ---    |
+| str     | str    | bool   | u32    | f64    |
+|---------|--------|--------|--------|--------|
+| India   | d=0    | false  | 79153  | 0.609  |
+| India   | d=0    | true   | 24703  | 0.633  |
+| India   | d=1-2  | false  | 18604  | 0.352  |
+| India   | d=1-2  | true   | 7329   | 0.281  |
+| India   | d>2    | false  | 132093 | 0.383  |
+| India   | d>2    | true   | 54623  | 0.354  |
+| India   | na     | false  | 42424  | 0.495  |
+| India   | na     | true   | 9047   | 0.363  |
+| US      | d=0    | false  | 66788  | 0.735  |
+| US      | d=0    | true   | 10772  | 0.74   |
+| US      | d=1-2  | false  | 61220  | 0.215  |
+| US      | d=1-2  | true   | 7827   | 0.13   |
+| US      | d>2    | false  | 284215 | 0.215  |
+| US      | d>2    | true   | 45306  | 0.215  |
+| US      | na     | false  | 15454  | 0.76   |
+| US      | na     | true   | 717    | 0.441  |
+
+## s_unit
+shape: (16, 5)
+| country | hn_grp | s_unit | n      | y_rate |
+| ---     | ---    | ---    | ---    | ---    |
+| str     | str    | bool   | u32    | f64    |
+|---------|--------|--------|--------|--------|
+| India   | d=0    | false  | 79615  | 0.601  |
+| India   | d=0    | true   | 24241  | 0.66   |
+| India   | d=1-2  | false  | 19454  | 0.333  |
+| India   | d=1-2  | true   | 6479   | 0.329  |
+| India   | d>2    | false  | 139644 | 0.376  |
+| India   | d>2    | true   | 47072  | 0.368  |
+| India   | na     | false  | 47631  | 0.46   |
+| India   | na     | true   | 3840   | 0.612  |
+| US      | d=0    | false  | 59397  | 0.709  |
+| US      | d=0    | true   | 18163  | 0.823  |
+| US      | d=1-2  | false  | 59186  | 0.204  |
+| US      | d=1-2  | true   | 9861   | 0.21   |
+| US      | d>2    | false  | 270046 | 0.206  |
+| US      | d>2    | true   | 59475  | 0.256  |
+| US      | na     | false  | 14240  | 0.737  |
+| US      | na     | true   | 1931   | 0.811  |
+
+## unit_same
+shape: (16, 5)
+| country | hn_grp | unit_same | n      | y_rate |
+| ---     | ---    | ---       | ---    | ---    |
+| str     | str    | bool      | u32    | f64    |
+|---------|--------|-----------|--------|--------|
+| India   | d=0    | false     | 15304  | 0.629  |
+| India   | d=0    | true      | 88552  | 0.613  |
+| India   | d=1-2  | false     | 3166   | 0.26   |
+| India   | d=1-2  | true      | 22767  | 0.342  |
+| India   | d>2    | false     | 29653  | 0.368  |
+| India   | d>2    | true      | 157063 | 0.375  |
+| India   | na     | false     | 8079   | 0.35   |
+| India   | na     | true      | 43392  | 0.495  |
+| US      | d=0    | false     | 17119  | 0.809  |
+| US      | d=0    | true      | 60441  | 0.715  |
+| US      | d=1-2  | false     | 9394   | 0.164  |
+| US      | d=1-2  | true      | 59653  | 0.211  |
+| US      | d>2    | false     | 53131  | 0.237  |
+| US      | d>2    | true      | 276390 | 0.211  |
+| US      | na     | false     | 2300   | 0.708  |
+| US      | na     | true      | 13871  | 0.752  |
+
+## q_long_sfx
+shape: (16, 5)
+| country | hn_grp | q_long_sfx | n      | y_rate |
+| ---     | ---    | ---        | ---    | ---    |
+| str     | str    | bool       | u32    | f64    |
+|---------|--------|------------|--------|--------|
+| India   | d=0    | false      | 82810  | 0.617  |
+| India   | d=0    | true       | 21046  | 0.606  |
+| India   | d=1-2  | false      | 19258  | 0.342  |
+| India   | d=1-2  | true       | 6675   | 0.303  |
+| India   | d>2    | false      | 143316 | 0.382  |
+| India   | d>2    | true       | 43400  | 0.35   |
+| India   | na     | false      | 42623  | 0.478  |
+| India   | na     | true       | 8848   | 0.442  |
+| US      | d=0    | false      | 48393  | 0.738  |
+| US      | d=0    | true       | 29167  | 0.732  |
+| US      | d=1-2  | false      | 42902  | 0.203  |
+| US      | d=1-2  | true       | 26145  | 0.208  |
+| US      | d>2    | false      | 204938 | 0.215  |
+| US      | d>2    | true       | 124583 | 0.216  |
+| US      | na     | false      | 9915   | 0.741  |
+| US      | na     | true       | 6256   | 0.753  |
+
+## s_long_sfx
+shape: (16, 5)
+| country | hn_grp | s_long_sfx | n      | y_rate |
+| ---     | ---    | ---        | ---    | ---    |
+| str     | str    | bool       | u32    | f64    |
+|---------|--------|------------|--------|--------|
+| India   | d=0    | false      | 70262  | 0.605  |
+| India   | d=0    | true       | 33594  | 0.635  |
+| India   | d=1-2  | false      | 17402  | 0.337  |
+| India   | d=1-2  | true       | 8531   | 0.321  |
+| India   | d>2    | false      | 127233 | 0.38   |
+| India   | d>2    | true       | 59483  | 0.362  |
+| India   | na     | false      | 38947  | 0.468  |
+| India   | na     | true       | 12524  | 0.485  |
+| US      | d=0    | false      | 12145  | 0.762  |
+| US      | d=0    | true       | 65415  | 0.731  |
+| US      | d=1-2  | false      | 10927  | 0.204  |
+| US      | d=1-2  | true       | 58120  | 0.205  |
+| US      | d>2    | false      | 52067  | 0.223  |
+| US      | d>2    | true       | 277454 | 0.214  |
+| US      | na     | false      | 2276   | 0.74   |
+| US      | na     | true       | 13895  | 0.747  |
+
+## legal_same
+shape: (16, 5)
+| country | hn_grp | legal_same | n      | y_rate |
+| ---     | ---    | ---        | ---    | ---    |
+| str     | str    | bool       | u32    | f64    |
+|---------|--------|------------|--------|--------|
+| India   | d=0    | false      | 27778  | 0.636  |
+| India   | d=0    | true       | 76078  | 0.607  |
+| India   | d=1-2  | false      | 5974   | 0.407  |
+| India   | d=1-2  | true       | 19959  | 0.309  |
+| India   | d>2    | false      | 45856  | 0.42   |
+| India   | d>2    | true       | 140860 | 0.359  |
+| India   | na     | false      | 12109  | 0.519  |
+| India   | na     | true       | 39362  | 0.457  |
+| US      | d=0    | false      | 18405  | 0.654  |
+| US      | d=0    | true       | 59155  | 0.761  |
+| US      | d=1-2  | false      | 26562  | 0.137  |
+| US      | d=1-2  | true       | 42485  | 0.247  |
+| US      | d>2    | false      | 130764 | 0.175  |
+| US      | d>2    | true       | 198757 | 0.242  |
+| US      | na     | false      | 5789   | 0.69   |
+| US      | na     | true       | 10382  | 0.777  |
+
+## name_raw_eq
+shape: (11, 5)
+| country | hn_grp | name_raw_eq | n      | y_rate |
+| ---     | ---    | ---         | ---    | ---    |
+| str     | str    | bool        | u32    | f64    |
+|---------|--------|-------------|--------|--------|
+| India   | d=0    | false       | 103735 | 0.615  |
+| India   | d=1-2  | false       | 25818  | 0.33   |
+| India   | d>2    | false       | 186041 | 0.374  |
+| India   | d>2    | true        | 675    | 0.31   |
+| India   | na     | false       | 51364  | 0.472  |
+| US      | d=0    | false       | 77503  | 0.736  |
+| US      | d=1-2  | false       | 68059  | 0.194  |
+| US      | d=1-2  | true        | 988    | 0.965  |
+| US      | d>2    | false       | 326868 | 0.21   |
+| US      | d>2    | true        | 2653   | 0.852  |
+| US      | na     | false       | 16008  | 0.747  |

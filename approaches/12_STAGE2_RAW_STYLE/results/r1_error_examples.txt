@@ -1,0 +1,222 @@
+error counts (address present, fold-B band, R1):
+shape: (8, 3)
+| err              | hn_grp | len  |
+| ---              | ---    | ---  |
+| str              | str    | u32  |
+|------------------|--------|------|
+| accepted_wrong   | d=0    | 736  |
+| accepted_wrong   | d=1-2  | 499  |
+| accepted_wrong   | d>2    | 2032 |
+| accepted_wrong   | na     | 259  |
+| rejected_correct | d=0    | 1378 |
+| rejected_correct | d=1-2  | 4101 |
+| rejected_correct | d>2    | 4700 |
+| rejected_correct | na     | 835  |
+
+===== rejected_correct / d=0 (n=1,378) =====
+p=0.149 [India] d=0
+  Q : KLR + CO | E 189, GURGAON, Haryana
+  S1: Kala & Co | E 189, Lgf Sushant Lok 2, Gurgaon, Haryana
+p=0.157 [US] d=0
+  Q : Fayewexarc | 2800 TWELFTH AVE, WINFIELD, KS
+  S1: Y/L Encore LLC | 2800 12th Avenue, Unit LOT B-14, Winfield, KS
+p=0.300 [US] d=0
+  Q : Dcpasquale Eco LLC LLC | Virginia, 808 Keswick Drive, Culpeper
+  S1: Depasquale Eco LLC | 808 Keswick Drive, Culpeper Town, VA
+p=0.397 [India] d=0
+  Q : Tavoflux | I/246, Thottumoochikkal House, Post Pallam, Pallikkal, Cheruthuruthy, Thrissur, Kerala
+  S1: Pnc Trading Associates | I/246, Thottumoochikkal House, Post Pallam, Pallikkal, Cheruthuruthy, Thrissur, Kerala
+p=0.512 [India] d=0
+  Q : Vantageumbra | K. Sons Complex, I Floor No. 163/1, Prakasam Salai, Broadway, Chennai, Tamil Nadu
+  S1: Jyoti Consultants Limited | K. Sons Complex, I Floor No. 163/1, Prakasam Salai, Broadway, Chennai, Tamil Nadu
+p=0.583 [India] d=0
+  Q : Umbravera Sys | Howrah, Kolkata, Moore Avenue, West Bengal, 61/30/1
+  S1: Megha Farmers LLP | 61/30/1, Moore Avenue, Kolkata, Howrah, West Bengal
+p=0.669 [India] d=0
+  Q : >> Irisolcalo | Palanahalli, Yelahanka (P.O)Bangalore-64., Bangalore North, KA
+  S1: PDE Science Private Limited | Palanahalli, Yelahanka (P.O)Bangalore-64., Bangalore, Karnataka
+p=0.699 [India] d=0
+  Q : Limited Swastik Private Center | 602, MUMBAI, Maharashtra
+  S1: Swastik Consulting Private Limited | 602, Avior, Nirmal Galaxy L.B.S. Marg, Opp. Johnson & Johnson, Mulund (W), Mumbai, Mumbai City, Maharashtra
+
+===== rejected_correct / d=1-2 (n=4,101) =====
+p=0.056 [US] d=2
+  Q : JAYME  JONES ACQUISITIONS CORP | 2147 DIVISION ST, null, CHICAGO TOWNSSHIP, IL
+  S1: Jayme Jones Acquisitions | 2145 Division Street, Chicago, IL
+p=0.265 [US] d=1
+  Q : Federal Crystal Inc  Partners | 6032 Hiawatha Dr, Town Of Winneconne, Wisconsin
+  S1: Federal Crystal Advertising Inc | 6033 Hiawatha Drive, Town Of Winneconne, WI
+p=0.269 [US] d=2
+  Q : (Ínc) Prairie Keystone Yhn | 2386 WILSONBURG ROAD, CLARKSBURG, WV
+  S1: Prairie Keystone Yhn Inc | 2388 Wilsonburg Road, Clarksburg, WV
+p=0.335 [US] d=1
+  Q : >> Express Brands | MANHATTAN, 4 ELIZA DRIVE, MT
+  S1: Express Brands Ltd | 5 Eliza Drive, Unit UNIT B, Manhattan, MT
+p=0.509 [India] d=2
+  Q : Royal Marketing | उत्तर प्रदेश, Plot No P-2 Pahadpur, Kanpur Nagar, Sanigawan
+  S1: Royal Marketing Ltd | Plot No P-4 Pahadpur, Sanigawan, Uttar Pradesh, Bingawa, Kanpur Nagar
+p=0.540 [US] d=2
+  Q : 364-365 Owners North Corp | 3542 Austin St, Seattle, Washington
+  S1: 364-365 North Owners Corp | 3544 Austin Street, WA, Seattle
+p=0.560 [India] d=2
+  Q : Sai Ihlx | 354, Sec-21, Gurugram, Gurgaon, Palam Road, हरियाणा
+  S1: Sai Impex | 352, Sec-21, Gurugram, Palam Road, Gurgaon, Haryana
+p=0.621 [US] d=1
+  Q : BORDEAU RAPID CONSUMER LLC | 311 Cedarwood Ln, Newington, Connecticut
+  S1: Bordeau Rapid Consumer LLC | 312 Cedarwood Lane, Newington, CT
+
+===== rejected_correct / d>2 (n=4,700) =====
+p=0.005 [India] d=299
+  Q : Murti Trading Limited Private | #G-423 126, Plot No. 24, 25 & 26 Road No. 12, Ida, Hyderabad, Nacharam, TG
+  S1: Murti Trading Private Limited | Survey No. 124/P, Plot No. 24, 25 & 26 Road No. 12, Ida, Nacharam, Hyderabad, Telangana
+p=0.006 [US] d=11
+  Q : Anchor Tech Inc | 5024 Sunshine Dr, Nashville, Tennessee
+  S1: Anchor Tech PC | 5013 Sunshine Drive, Nashville, TN
+p=0.155 [US] d=2304
+  Q : Veofluxnex | 120th Cir, Blaine, Minnesota
+  S1: Modern Mortgage Partners | 2424 120th Circle, Unit Unit C, Blaine, MN
+p=0.174 [India] d=3
+  Q : RLP PRIVATE GRID (LIMITED) | #7 , PLOT NO H 1, GROUND FLOOR DISTRICT CENTRE, WAZIRPUR, GARG TOWER, NETAJI SUBHASH PLACE, Delhi
+  S1: Rlp Grid Private Limited | Shop No 4, Plot No H 1, Ground Floor District Centre, Wazirpur, Garg Tower, Netaji Subhash Place, North West, Delhi
+p=0.306 [US] d=9
+  Q : TEMPLE CHURCH CHURCH | 8801 St Rte 335, Minford, Ohio
+  S1: Temple Church | 8792 St Rte 335, Minford, OH
+p=0.422 [US] d=13
+  Q : Envue LLC | SEATTLE, WA, ##9226 EIGHTH AVENUE
+  S1: Envue LLC | 9239 8th Avenue, Seattle, WA
+p=0.475 [US] d=11
+  Q : Newark Xcel  Inc | 136- ELGIN COURT, NEWARK, DE
+  S1: Newark Xcel Inc | 125 Elgin Court, DE, Newark
+p=0.512 [US] d=668
+  Q : Yumakor | 74 Central Avenue, Sykesville, Maryland
+  S1: Back Alley Tavern! Inc | 742 Central Avenue, Sykesville, MD
+
+===== rejected_correct / na (n=835) =====
+p=0.175 [India] d=-1
+  Q : Ltd. Sithara Institute Of Technology | KA, Bengaluru, #G53 Shree Ashram View Enclave, Bangalore
+  S1: Sithara Institute of Technology Ltd | Bangalore, Save Building 15/3 Ks Garden Thamarai Kannan Rd Murphy Town, Halasuru, Karnataka, #G03 Shree Ashram View Enclave, Bengaluru
+p=0.288 [US] d=-1
+  Q : -- Synveosol | Hawk Pride Mountain Road, Tuscumbia, Alabama
+  S1: Secure All Inc | 3570 Hawk Pride Mountain Road, Tuscumbia, AL
+p=0.317 [India] d=-1
+  Q : White LLP [Center] | No 9-00 Prasad Chl, Mumbai (SUBURBAN), Mumbai City, MH
+  S1: White Consulting LLP | Mumbai, Maharashtra, Hanuman Rd Iit Market, A S Marg, Mumbai, Mumbai City, Prasad Chl
+p=0.380 [US] d=-1
+  Q : KELONYLA | WILLOW MANOR DRIVE, OFALLON, MO
+  S1: Monarch Inc | 325 Willow Manor Drive, Ofallon, MO
+p=0.411 [India] d=-1
+  Q : Rizaarc | Recondo Compound, Inside Municipal Asphalt Compound, S. K. Ahire Marg, Worli, Mumbai City, Maharashtra
+  S1: Concur & Co | Recondo Compound, Inside Municipal Asphalt Compound, S. K. Ahire Marg, Worli, Mumbai City, Maharashtra
+p=0.463 [India] d=-1
+  Q : Great Cte Private Limited | www.greatcte.com | #62NAY BANS, NEW DELHI, Delhi
+  S1: Great Care Private Limited | New Delhi, Delhi, 62Naya Bans, Central Delhi
+p=0.481 [India] d=-1
+  Q : Best Hospital Hospital | 22 DEROZEO COLLEGE, RAJARHAT, SUNLAND RESIDENCY, JAGARDANGA, KOLKATA, West Bengal
+  S1: Best Hospital | Derozeo College, Rajarhat, Sunland Residency, Jagardanga, Kolkata, Parganas North, West Bengal
+p=0.612 [India] d=-1
+  Q : II Investments  Pvt | Ab105 Aparna Cyberzon, Serilingampally, K.v.rangareddy, Serilingampally, TG
+  S1: II Investments Pvt Ltd | Ab605 Aparna Cyberzon, Serilingampally, K.V.Rangareddy, Telangana
+
+===== accepted_wrong / d=0 (n=736) =====
+p=0.794 [India] d=0
+  Q : LTD MUMBAI FINANCE | 204, MUMBAI II, महाराष्ट्र
+  S1: Mumbai Finance Private Limited | Maharashtra, Mumbai, 204, 2Nd Floor, Ganga Niwas, P. M. Road, Vile Parle (East), Mumbai City
+p=0.849 [India] d=0
+  Q : Ko Medical Centre Cénter Limited | New Delhi, Sh-7/120, New Delhi, दिल्ली
+  S1: Ko Medical Centre Center | G/F, Block-7, New Moti Nagar, Delhi, Sh-7/99, New Delhi
+p=0.880 [India] d=0
+  Q : ब्राइट लॉजिस्टिक्स प्राइवेट लिमिटेड | C- 4-36, MUMBAI REGION, Maharashtra
+  S1: Bright Logistics Private Limited | A Wing, Flat No 4, Sahar Co-Op Housing Society, Parsiwada, Sahar Road, Andheri(East), Mumbai, Mumbai City, Maharashtra
+p=0.887 [India] d=0
+  Q : Pune Limited Private Services | 51/15, Sector No 28, Ganesh Society Ganganagar, Pradhikaran, Nigdi, Pune Region, Pune, MH
+  S1: Pune Infradevelopers Private Limited | 51/8, Sector No 28, Ganesh Society Ganganagar, Pradhikaran, Nigdi, Pune, Maharashtra
+p=0.889 [India] d=0
+  Q : Imperial Global Limited | Sy. No. 11/G197, Plot No. 803, M/s. Harsha Construction, Ayyappa Society, Khanamet, Near Ysr Statue, Shaikpet, Hyderabad, TG
+  S1: Imperial Global Private Limited | Sy. No. 11/G194, Plot No. 803, M/S. Harsha Construction, Ayyappa Society, Khanamet, Near Ysr Statue, Shaikpet, Hyderabad, Telangana
+p=0.922 [US] d=0
+  Q : PROEX LTD | 26W 37 Harrison Ave, Winfield, Illinois
+  S1: Proex LLC | 26W 372 Harrison Avenue, Winfield, IL
+p=0.961 [India] d=0
+  Q : LNDD Thane  Service | Thane, #1704, MH
+  S1: Thane Financial | Lodha' Casa Ultima 'A', Wing Flat No-1704Nr, Thane, Maharashtra
+p=0.982 [India] d=0
+  Q : Quocira | 53/24, 8 E MAIN ROAD JAYANAGAR 4TH BLOCK, BANGALORE, Karnataka
+  S1: Metrix Traders Private Limited | #53, 8Th Main, 4Th Block, Jayanagar, Bangalore, Karnataka
+
+===== accepted_wrong / d=1-2 (n=499) =====
+p=0.707 [US] d=2
+  Q : Frontier Custom Floating LLC | Maryland, 5606-5608 Clearspring Road, Baltimore
+  S1: Frontier Custom Floating L.L.C. | 5604 Clearspring Road, Baltimore, MD
+p=0.742 [US] d=1
+  Q : Choice Medical Products Inc | 18661 CAVE CREEK ROAD, PHOENIX, AZ
+  S1: Choice Medical Products Group | 18660 Cave Creek Road, Unit 139, Phoenix, AZ
+p=0.757 [US] d=2
+  Q : Apex Craghro Company LLC | 80 First Ave, Lester Prariie, Minnesota
+  S1: Apex Cargo Company | MN, 78 1st Avenue, Lester Prairie
+p=0.782 [India] d=2
+  Q : Saara (Índia) LLP Center | W. No.#8, Near Anjeneya Badavane Kottur, Bellary, KA
+  S1: Saara Overseas (India) Ltd | W. No.06, Near Anjeneya Badavane Kottur, Vijayanagara, Bellary, Karnataka
+p=0.804 [US] d=1
+  Q : Sterling Ltd Dpc | 8 Carriageway Drive, # 508, Hazel Crest, Illinois
+  S1: Sterling Dpc Group | 7 Carriageway Drive, Unit 508, Hazel Crest, IL
+p=0.881 [India] d=2
+  Q : Pioneer Consultants LLP | DOOR NO 30. 1ST FLOOR CITI CENTRECHURCH STREET BANGALORE, BANGALORE, Karnataka
+  S1: Pioneer Consultants | No.28 1St Floor Citi Centrechurch Street Bangalore, Bangalore, Karnataka
+p=0.972 [US] d=2
+  Q : D+ Ready LLC | 172 YORK ST, ELMHURST, IL
+  S1: D+ Ready L.L.C. | 170 York Street, Elmhurst, IL
+p=0.976 [US] d=1
+  Q : PEDIATRIC HEALTH INC | 3001- Independence Avenue, New Hope, Minnesota
+  S1: Pediatric Health Inc. | MN, 3000 Independence Avenue, New Hope
+
+===== accepted_wrong / d>2 (n=2,032) =====
+p=0.708 [India] d=133
+  Q : High Medical Centre LLP | DOOR NO 859/5 A 731, SUSHANT LOK I, BESTECH MKT, SADAR BAZAR, Haryana
+  S1: High Medical Centre | A 726, Sushant Lok I, Bestech Mkt, Sadar Bazar, Gurgaon, Haryana
+p=0.786 [India] d=18
+  Q : Delhi Private-Limited Services | H-196 Ashok Vihar Phase-i, North-west Delhi, North Delhi, DL
+  S1: Delhi Sidhi Pvt. Ltd. | B-214, Ashok Vihar Phase-I, Delhi, North West, Delhi
+p=0.832 [India] d=272
+  Q : Vantageiri - 1919888861 | 30, KSHITIJ, 30TH FLOOR, 47, NEPEANSEA ROAD, MUMBAI, Maharashtra
+  S1: Nepeansea Road Vision Private Limited | 302, Kshitij, 30Th Floor, 47, Nepeansea Road, Mumbai, Maharashtra
+p=0.843 [India] d=34
+  Q : Alishan & Sg Limited | Door No 4-3 Shreenathji Bldg. 1St Flr Shop No 19, Bombay, Mumbai City, MH
+  S1: Alishan & Sons Private Limited | 38 Shreenathji Bldg. 1St Flr Shop No 19, J M Compound Chandi Gali, 3Rd Bhoiwada, Mumbai, Mumbai City, Maharashtra
+p=0.845 [US] d=2071
+  Q : Co Kz Metro Arc | 230 Ridgecrest Drive, Tennessee, Knoxville
+  S1: KZ Metro Arc LLC | 2301 Ridgecrest Drive, Knoxville, TN
+p=0.941 [India] d=50
+  Q : Consulting Unnati Solutions LLP | #10 C/o Shausat Ali Khan, Kf-60 Mci, Plaza, Bareilly, UP
+  S1: Consulting Unnati Solutions Pvt. Ltd. | C/O Shauqat Ali Khan, Kf-60 Mci, Plaza, Bareilly, Uttar Pradesh
+p=0.966 [US] d=2998
+  Q : Frontier Desert Pstariot Inc | ORANGE, 418 LARK STREET, TX
+  S1: Frontier Desert Patriot Inc. | 3416 Lark Street, Orange, TX
+p=0.985 [India] d=233
+  Q : Ram Delsoopets LLP | #238/1, Bangalore South, Bangalore, ಕರ್ನಾಟಕ
+  S1: Ram Developers Private Limited | Bangalore, Sachidananda Nagar, Beml 5Th Stage, Halagevaderahalli Village, Karnataka, Bangalore South, #238/1/6
+
+===== accepted_wrong / na (n=259) =====
+p=0.704 [India] d=-1
+  Q : Prateek Service (tIndai) Limited | NO 18 MADHAV UDYAN, DHARANGAON ROAD KOPARGAON, AHMEDNAGAR, Maharashtra
+  S1: Prateek Service (India) Private Limited | Maharashtra, Dharangaon Road Kopargaon, Madhav Udyan, Ahmednagar
+p=0.731 [India] d=-1
+  Q : Indus & Brothers L.L.P. | No 18Zamzam Nagar Pdanur Main Road, Coimbatore, TN
+  S1: Indus & Brothers Private Limited | No 11Zamzam Nagar Podanur Main Road, Coimbatore, Tamil Nadu
+p=0.737 [US] d=-1
+  Q : Wexriza | POND REEF ROAD, AK, KETCHIKAN GATEWAY BOROUGH
+  S1: Oncology Group | 93 Pond Reef Road, Ketchikan Gateway Borough, AK
+p=0.794 [India] d=-1
+  Q : Kc Flames Limited | Gorakhpur Region, 14 Raipur Raja, उत्तर प्रदेश
+  S1: Kc Flames Private Limited | Raipur Raja, Near Dehat Kotwali, Bahraich, Uttar Pradesh
+p=0.817 [India] d=-1
+  Q : Mns Group Pvt Ltd | Ernakulam, KL, Ernakulam, Xvi/1899kochuppall Road Thoppumpady
+  S1: Mns Group | Xvi/1890Kochuppally Road Thoppumpady, Ernakulam, Kerala
+p=0.858 [India] d=-1
+  Q : Save (India) Alliance Pvt Ltd | NO 30 C/O UMESH SAW, VILLAGE, ARTHUA, P S KASMA, RAFIGANJ, Bihar
+  S1: Save (India) Alliance Ltd | C/O Umesh Saw, Village, Arthua, P S Kasma, Rafiganj, Aurangabad(Bh), Bihar
+p=0.905 [US] d=-1
+  Q : Pesioit LLC | W651 Platinum Drive, Town Of Clarno, Wisconsin
+  S1: Pesoft | W6510 Platinum Drive, Town Of Clarno, WI
+p=0.906 [US] d=-1
+  Q : Internal Medicine (Partners-Inc) | Columbia St, Montana, Thompson Falls
+  S1: Internal Medicine Global Associates LLC | 409 Jefferson Street, Thompson Falls, MT
