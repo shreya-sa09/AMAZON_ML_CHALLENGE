@@ -1,0 +1,30 @@
+[     1s] R0_base: 103 features, train 1,921,682, val 534,915
+[1000]	es's binary_logloss: 0.109856
+[2000]	es's binary_logloss: 0.105763
+[3000]	es's binary_logloss: 0.10404
+[4000]	es's binary_logloss: 0.103174
+[   354s] fit model_R0_base.txt: best_iteration 4093, 352s
+[   382s] R0_base: F0.5 0.985647 P 0.99359 R 0.96677 FS 278 AUC 0.99245 ap_rej_corr 12657 ap_acc_wrong 3797
+{
+  "variant": "R0_base",
+  "f05": 0.9856469625082845,
+  "precision": 0.9935935952927158,
+  "recall": 0.9667675299043675,
+  "singleton_acc": 0.9886761710794297,
+  "false_singletons": 278,
+  "accepted_pairs": 7363752,
+  "band_auc": 0.9924488216199203,
+  "band_auc_addr_present": 0.9947583866988516,
+  "band_auc_addr_missing": 0.9503314761999517,
+  "ap_rejected_correct": 12657,
+  "ap_accepted_wrong": 3797,
+  "am_rejected_correct": 6363,
+  "am_accepted_wrong": 1192,
+  "f05_India": 0.98564012646289,
+  "f05_US": 0.9856515367940647,
+  "groups": [],
+  "n_features": 103,
+  "best_iteration": 4093,
+  "runtime_sec": 382,
+  "delta_vs_a02_saved": -4.2817342289946936e-05
+}

@@ -1,0 +1,36 @@
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\10_STAGE2_ADDRESS_SIGNALS\src\run.py:28: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  f = pl.concat([rows.select("q_idx"), fn(norm_pairs(rows))], how="horizontal")
+[     9s] features hn/train: 1,921,682 rows in 8s
+[    11s] features hn/val: 534,915 rows in 2s
+[    11s] R1_hn: 109 features, train 1,921,682, val 534,915
+[1000]	es's binary_logloss: 0.0981017
+[2000]	es's binary_logloss: 0.094875
+[3000]	es's binary_logloss: 0.0935291
+[   348s] fit model_R1_hn.txt: best_iteration 3668, 336s
+[   376s] R1_hn: F0.5 0.986268 P 0.99396 R 0.96785 FS 286 AUC 0.99402 ap_rej_corr 11014 ap_acc_wrong 3526
+{
+  "variant": "R1_hn",
+  "f05": 0.9862678998628127,
+  "precision": 0.9939611359986428,
+  "recall": 0.9678527526407094,
+  "singleton_acc": 0.9883503054989816,
+  "false_singletons": 286,
+  "accepted_pairs": 7365130,
+  "band_auc": 0.9940160510639217,
+  "band_auc_addr_present": 0.9962392887719994,
+  "band_auc_addr_missing": 0.9498759727026328,
+  "ap_rejected_correct": 11014,
+  "ap_accepted_wrong": 3526,
+  "am_rejected_correct": 6355,
+  "am_accepted_wrong": 1190,
+  "f05_India": 0.9857827403992784,
+  "f05_US": 0.9865925404857007,
+  "groups": [
+    "hn"
+  ],
+  "n_features": 109,
+  "best_iteration": 3668,
+  "runtime_sec": 376,
+  "delta_vs_a02_saved": 0.0005781200122382257
+}
