@@ -1,0 +1,68 @@
+[    57s]   epoch 1 step 200/3752 loss 0.6259
+[    87s]   epoch 1 step 400/3752 loss 0.5196
+[    98s] epoch 1 mean loss 0.4922
+[   118s]   epoch 2 step 600/3752 loss 0.2959
+[   148s]   epoch 2 step 800/3752 loss 0.2756
+[   169s] epoch 2 mean loss 0.2650
+[   179s]   epoch 3 step 1000/3752 loss 0.2225
+[   209s]   epoch 3 step 1200/3752 loss 0.2172
+[   240s]   epoch 3 step 1400/3752 loss 0.2112
+[   241s] epoch 3 mean loss 0.2109
+[   271s]   epoch 4 step 1600/3752 loss 0.1881
+[   301s]   epoch 4 step 1800/3752 loss 0.1859
+[   313s] epoch 4 mean loss 0.1850
+[   332s]   epoch 5 step 2000/3752 loss 0.1692
+[   362s]   epoch 5 step 2200/3752 loss 0.1691
+[   384s] epoch 5 mean loss 0.1679
+[   393s]   epoch 6 step 2400/3752 loss 0.1553
+[   423s]   epoch 6 step 2600/3752 loss 0.1561
+[   454s]   epoch 6 step 2800/3752 loss 0.1556
+[   456s] epoch 6 mean loss 0.1556
+[   485s]   epoch 7 step 3000/3752 loss 0.1463
+[   515s]   epoch 7 step 3200/3752 loss 0.1466
+[   528s] epoch 7 mean loss 0.1465
+[   546s]   epoch 8 step 3400/3752 loss 0.1419
+[   576s]   epoch 8 step 3600/3752 loss 0.1417
+[   600s] epoch 8 mean loss 0.1414
+[   673s] char8 A: 649s; val AUC 0.98098
+[   704s]   epoch 1 step 200/3760 loss 0.6260
+[   734s]   epoch 1 step 400/3760 loss 0.5230
+[   745s] epoch 1 mean loss 0.4951
+[   765s]   epoch 2 step 600/3760 loss 0.2969
+[   795s]   epoch 2 step 800/3760 loss 0.2746
+[   817s] epoch 2 mean loss 0.2633
+[   826s]   epoch 3 step 1000/3760 loss 0.2230
+[   857s]   epoch 3 step 1200/3760 loss 0.2156
+[   887s]   epoch 3 step 1400/3760 loss 0.2105
+[   889s] epoch 3 mean loss 0.2103
+[   918s]   epoch 4 step 1600/3760 loss 0.1882
+[   948s]   epoch 4 step 1800/3760 loss 0.1856
+[   961s] epoch 4 mean loss 0.1847
+[   979s]   epoch 5 step 2000/3760 loss 0.1683
+[  1010s]   epoch 5 step 2200/3760 loss 0.1688
+[  1032s] epoch 5 mean loss 0.1686
+[  1040s]   epoch 6 step 2400/3760 loss 0.1594
+[  1071s]   epoch 6 step 2600/3760 loss 0.1582
+[  1101s]   epoch 6 step 2800/3760 loss 0.1567
+[  1104s] epoch 6 mean loss 0.1568
+[  1132s]   epoch 7 step 3000/3760 loss 0.1476
+[  1162s]   epoch 7 step 3200/3760 loss 0.1473
+[  1176s] epoch 7 mean loss 0.1478
+[  1193s]   epoch 8 step 3400/3760 loss 0.1431
+[  1223s]   epoch 8 step 3600/3760 loss 0.1427
+[  1247s] epoch 8 mean loss 0.1431
+[  1410s] char8 B: 737s; val AUC 0.98118
+[  1411s] char8-only AUC val 0.98298 (4-epoch 0.97758)
+[1000]	es's binary_logloss: 0.0594642
+[  1563s] fit model_R10_s42.txt: best_iteration 1695, 150s
+[1000]	es's binary_logloss: 0.0593648
+[  1790s] fit model_R10_s7.txt: best_iteration 1738, 216s
+[  1811s] R7_s42: {"plain_ef05": 0.9882, "proxy_same_k2.4": 0.987696, "proxy_spread_k1.5": 0.987753}
+[  1817s] R7_s7: {"plain_ef05": 0.988251, "proxy_same_k2.4": 0.98775, "proxy_spread_k1.5": 0.987803}
+[  1822s] R10_s42: {"plain_ef05": 0.988391, "proxy_same_k2.4": 0.987913, "proxy_spread_k1.5": 0.98798}
+[  1828s] R10_s7: {"plain_ef05": 0.988417, "proxy_same_k2.4": 0.987946, "proxy_spread_k1.5": 0.98802}
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\24_CHAR_8EPOCH\src\run24.py:124: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  X = pl.concat([X, hn_features(p), ate.apply(p, te)], how="horizontal") \
+[  2087s] shift val: {'R7': 200211, 'R10': 200457, 'R10_vs_R7_pct': 0.12287037175779947}
+[  2209s] shift test: {'R7': 823775, 'R10': 820985, 'R10_vs_R7_pct': -0.3386847136657489}
