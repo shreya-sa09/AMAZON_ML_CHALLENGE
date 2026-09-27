@@ -1,0 +1,36 @@
+{
+  "variant": "missing-address queries only: approximate Top-80, exact Top-20, union saved Top-10",
+  "sample": "fixed 5000 validation-fold missing-address queries per country; other queries unchanged",
+  "sample_queries": 10000,
+  "sample_matched_queries": 9760,
+  "saved_candidate_pairs": 100000,
+  "added_candidate_pairs": 100974,
+  "added_true_pairs": 411,
+  "added_negative_pairs": 100563,
+  "candidate_recall_baseline": 0.7841188524590164,
+  "candidate_recall_new": 0.8262295081967214,
+  "candidate_true_baseline": 7653,
+  "candidate_true_new": 8064,
+  "sample_baseline_correct_top1": 6266,
+  "sample_new_correct_top1": 6297,
+  "sample_baseline_accepted_true": 5371,
+  "sample_new_accepted_true": 5383,
+  "sample_top1_changed": 2017,
+  "validation_baseline": {
+    "f05": 0.9856897798505745,
+    "precision": 0.9936089128581574,
+    "recall": 0.9668486596305257,
+    "singleton_acc": 0.9885947046843178,
+    "false_singletons": 280,
+    "accepted_pairs": 7363903
+  },
+  "validation_new_sample_only": {
+    "f05": 0.9856975107800573,
+    "precision": 0.9936132121630984,
+    "recall": 0.9668618567446272,
+    "singleton_acc": 0.9885539714867617,
+    "false_singletons": 281,
+    "accepted_pairs": 7363901
+  },
+  "runtime_sec": 67
+}
