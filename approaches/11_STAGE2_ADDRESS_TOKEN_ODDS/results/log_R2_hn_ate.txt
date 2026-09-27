@@ -1,0 +1,41 @@
+[     6s] ATE pool rows 7,428,519
+[    14s] ATE tables: qo 246,026 / so 225,769 tokens
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\11_STAGE2_ADDRESS_TOKEN_ODDS\src\run.py:52: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  parts.append(pl.concat([rows.select("q_idx"), ate.apply(norm_pairs(rows), te)], how="horizontal"))
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\11_STAGE2_ADDRESS_TOKEN_ODDS\src\run.py:54: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  fv = pl.concat([V.select("q_idx"), ate.apply(norm_pairs(V), te_all)], how="horizontal")
+[    20s] ATE features built in 19s
+[    20s] R2_hn_ate: 115 features, train 1,921,682, val 534,915
+[1000]	es's binary_logloss: 0.09648
+[2000]	es's binary_logloss: 0.0934367
+[3000]	es's binary_logloss: 0.0920092
+[   280s] fit model_R2_hn_ate.txt: best_iteration 3472, 259s
+[   305s] R2_hn_ate: F0.5 0.986354 P 0.99405 R 0.96791 FS 273 AUC 0.99415 ap_rej_corr 10959 ap_acc_wrong 3364
+{
+  "variant": "R2_hn_ate",
+  "f05": 0.9863540428989693,
+  "precision": 0.9940536676432339,
+  "recall": 0.9679077504179111,
+  "singleton_acc": 0.9888798370672097,
+  "false_singletons": 273,
+  "accepted_pairs": 7364997,
+  "band_auc": 0.9941549726924328,
+  "band_auc_addr_present": 0.9963767664094265,
+  "band_auc_addr_missing": 0.9496989111025724,
+  "ap_rejected_correct": 10959,
+  "ap_accepted_wrong": 3364,
+  "am_rejected_correct": 6396,
+  "am_accepted_wrong": 1205,
+  "f05_India": 0.9859092200071619,
+  "f05_US": 0.9866516926234932,
+  "groups": [
+    "hn",
+    "ate"
+  ],
+  "n_features": 115,
+  "best_iteration": 3472,
+  "runtime_sec": 305,
+  "delta_vs_a02_saved": 0.000664263048394842
+}
