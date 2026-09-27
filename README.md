@@ -1,122 +1,39 @@
-# Amazon ML Challenge 2026: Business Entity Resolution
+# Amazon ML Challenge 2026 — Business Entity Resolution — FINAL_V5_CHAR8
 
-Given business records from three sources, find every Source 2 / Source 3 record that refers to the
-same real-world business as each Source 1 entity. Scoring is macro F0.5 per Source 1 entity. The
-full task description is in [`PROBLEM_STATEMENT.md`](PROBLEM_STATEMENT.md).
-
-**Status:** complete pipeline, submission files generated and validated.
-**Validation macro F0.5: 0.978** (precision 0.989, recall 0.955), measured end-to-end on held-out
-Source 1 entities against all 10.3M training S2/S3 records.
-
----
-
-## Repository layout
-
-| path | what it is |
+| | |
 |---|---|
-| `business_entity_resolution/` | **current solution**: runnable pipeline (`src/`), `README.md` with run steps, pinned `requirements.txt` |
-| `Documentation_template.md` | methodology write-up for the final submission, filled in |
-| `make_submission.py` | builds `<team>_submission.zip` in the required layout |
-| `utils/validate_submission.py` | official format validator |
-| `entity_resolution_solution/` | earlier prototype, kept for history (superseded, see below) |
-| `PROBLEM_STATEMENT.md` | challenge statement (was the old root README) |
-| `dataset/`, `cache/`, `output/` | data, intermediate caches, submission files. Git-ignored, never committed |
+| **Leaderboard (macro F0.5)** | **0.983271** (best submission; previous: FINAL_V4 0.982899, FINAL_HN_ONLY 0.981172) |
+| Submitted (frozen) code | `e933bdf` (tag `submitted-v5-0.983271`); this branch is based on `620fb40` = `e933bdf` + the V5 run's own README/results |
+| Solution folder | `approaches/FINAL_V5_CHAR8/` |
+| Validation F0.5 (fold B, S1 id % 5 == 0) | 0.988391 (seed 42) / 0.988417 (seed 7) |
+| Features | 122 (identical to V4) — the only change from V4 is the char pair model trained 8 epochs instead of 4 |
+| Decision rule | expected-F0.5 subset selection per S1 on density-calibrated probabilities (odds × 0.5) |
+| Test matched records | 5,826,691 |
+| Official validator | PASS (default and `--check-ids`) |
 
----
+## Components
+- `business_entity_resolution/src/` — baseline pipeline (normalization, TF-IDF retrieval top-10, 64 pair features, Stage-1 LightGBM).
+- `approaches/02_STAGE2_CROSSFIT_RUNNERUP/` — Stage-2 recipe (edit features, cross-fitted name-token odds).
+- Lineage experiments: `10` house-number · `11` address-token odds · `15` density-matched evaluation · `17` char pair model · `18` expected-F0.5 rule
+  · `19` confident-anchor features · `21` 4-epoch char model · `24` 8-epoch char model (models/scores used by `--verify`).
+- `approaches/FINAL_HN_ONLY/`, `approaches/FINAL_V3_CHAR_EF05/` — earlier finals whose test scores are read by the test-shift gate;
+  `approaches/FINAL_V4_ANCHOR_CHAR4/` — direct predecessor (V5 = V4 + 8 char-model epochs).
+- `approaches/FINAL_V5_CHAR8/` — frozen final pipeline, config, run summary, run log, verify log.
+- `approaches/LEADERBOARD_HISTORY.md` — all real leaderboard submissions.
 
-## Where the project started (earlier prototype)
-
-The first commit had a research prototype in `entity_resolution_solution/`:
-
-* data inspection, a stratified validation split, 4-pass exact-key blocking (full name, clean name,
-  first two tokens, name prefix + house number), 16 string-similarity features, and
-  LogisticRegression / RandomForest / XGBoost models;
-* reported **F0.5 0.850**, but validated on a *sampled* corpus (true matches + 200k random records),
-  which makes precision look better than on the full data;
-* blocking recall was only **~70%**, which capped the achievable score;
-* a follow-up "hybrid blocking" report (0.89–0.92) scored its models on the same data they were
-  trained on, so those numbers are over-optimistic;
-* paths were hard-coded to `c:\amazon_ml_challenge\...`, there was no test inference, no output
-  files, no handling of France (test-only country) or of the Indic-script names, and the
-  documentation template was empty.
-
-## What changed
-
-A new pipeline was written from scratch in `business_entity_resolution/`.
-
-### 1. Data findings that drove the design
-* Every matched S2/S3 record belongs to **exactly one** S1 entity and matches never cross countries,
-  so the task is an assignment: each S2/S3 record goes to its best S1 entity, or to none.
-* 26% of S2/S3 records match nothing. Many are near-copies of a real business with one word or one
-  house number changed (hard negatives).
-* About 7% of S2/S3 names are written in **9 Indic scripts** (Devanagari, Bengali, Gurmukhi,
-  Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam).
-* Other noise: website/hashtag names (`darkbuildwellclinic.com`), `doing business as`, digit-for-letter
-  typos (`Preparat0ry`), shuffled word order, legal-suffix changes, `<NULL>`/`N/A` addresses, and
-  state names vs. codes.
-* Test adds **France** (15% of test S1), which is absent from training.
-
-### 2. Pipeline
-
-| stage | file | what it does |
-|---|---|---|
-| 0 | `prepare_data.py` | TSV → parquet |
-| 1 | `normalization.py`, `build_normalized.py` | name/address normalization: one Indic→Latin transliteration table for all 9 scripts, accent folding, legal suffixes (US/India/France), `dba`, website names, leet-typo repair, state codes, street abbreviations (EN/FR) |
-| 1b | `indic_dictionary.py`, `apply_indic_dict.py` | learns 526 transliteration→English token mappings (`praivet→private`, `injiniyaring→engineering`) from training pairs (training fold only) |
-| 2 | `retrieval.py`, `candidates.py` | per country: TF-IDF of name character 3-grams (spaces removed) + address tokens; GPU CountSketch top-40 then exact re-score, keep **10 S1 candidates per S2/S3 record** |
-| 3 | `features.py`, `build_features.py` | **64 features**: rapidfuzz name/address similarities, token and house-number overlap, "what differs" features (tokens/numbers on one side only), margins versus the runner-up candidate, ambiguity counts |
-| 4 | `train.py`, `metrics.py` | LightGBM classifier (892 trees); validation that mirrors the leaderboard; threshold sweep |
-| 5 | `predict.py` | assigns each record to its best candidate if p ≥ 0.7, then writes `output/matching_results.tsv` and `output/candidate_pairs.tsv` |
-
-### 3. Validation protocol
-S1 entities are split 80/20 by id. Each S2/S3 record follows its true S1 entity (or its top
-candidate if unmatched). The model and the Indic dictionary are fit on the 80% fold only. All 10.3M
-records are then scored and macro F0.5 is computed on the 20% fold exactly as the leaderboard does.
-Singletons are included and every distractor is present.
-
-### 4. Results
-
-| | candidate recall | macro F0.5 | precision | recall | India | US |
-|---|---|---|---|---|---|---|
-| earlier prototype (sampled corpus) | ~70% | 0.850 | 0.985 | 0.721 | — | — |
-| new pipeline v1 | 98.1% | 0.9707 | 0.9835 | 0.9436 | 0.9608 | 0.9774 |
-| **v2: + Indic dictionary + difference/margin features** | **98.7%** | **0.9783** | **0.9886** | **0.9549** | **0.9754** | **0.9802** |
-
-* The Indic dictionary raised candidate recall for Indic-script records from 91.3% to 99.4%.
-* Test has more distractors than train (about 40% vs 26%). Simulating that on validation gives about
-  0.976, and the 0.7 threshold stays optimal.
-* Test outputs: 1,732,544 S1 rows, 5.86M matched records, 99.7M candidate pairs.
-  `utils/validate_submission.py` reports **PASS**.
-
-### 5. Engineering notes
-* Built for a 16 GB RAM laptop with an RTX 4050 (6 GB). Stages process one country or chunk at a
-  time, cache to `cache/`, and resume after interruption.
-* Uses only the provided data and open-source libraries (no external lookups, APIs or pretrained
-  language models).
-
----
-
-## How to run
-
-See [`business_entity_resolution/README.md`](business_entity_resolution/README.md). In short:
-
-```bash
-python -m venv .venv
-.venv/Scripts/python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
-.venv/Scripts/python -m pip install -r business_entity_resolution/requirements.txt
-# place the challenge data in dataset/train and dataset/test
-cd business_entity_resolution/src && ../../.venv/Scripts/python run_all.py
-cd ../.. && .venv/Scripts/python utils/validate_submission.py --matching output/matching_results.tsv \
-    --candidate output/candidate_pairs.tsv --test-dir dataset/test
-.venv/Scripts/python make_submission.py <team_name>
+## Reproduce (from the repository root, challenge data in `dataset/`)
 ```
+python business_entity_resolution/src/run_all.py
+approaches/02_STAGE2_CROSSFIT_RUNNERUP/run_experiment.bat all
+# FINAL_HN_ONLY and FINAL_V3_CHAR_EF05 full runs (their cache/test_final_scored.parquet is read by the gate)
+# for --verify: run lineage experiments 10, 11, 17, 19, 21, 24 (src/run*.py) to rebuild their caches/models
+cd approaches/FINAL_V5_CHAR8 && set PYTHONDONTWRITEBYTECODE=1
+python src/final_run.py --verify        # reproduces validation 0.988391
+python src/final_run.py                 # full run -> output/matching_results.tsv, candidate_pairs.tsv (~37 min, RTX 4050)
+```
+Validator: `python utils/validate_submission.py --matching approaches/FINAL_V5_CHAR8/output/matching_results.tsv --candidate approaches/FINAL_V5_CHAR8/output/candidate_pairs.tsv --test-dir dataset/test --check-ids`
 
-The full run takes about 4–5 hours on the hardware above. Candidate generation and feature
-computation take most of that time.
-
-## Remaining to-do
-* Upload `output/matching_results.tsv` to the leaderboard portal.
-* Fill in team name, members and date in `Documentation_template.md`, then run `make_submission.py`.
-* Optional: one clean end-to-end run of `run_all.py`. The stages were run individually. The
-  Indic-script candidates were produced with the equivalent `candidates.patch_queries` step rather
-  than a full regeneration.
+## Limitations
+No France labels; no-address exact name-twin ties are not separable; validation ~0.005 above leaderboard (denser decoys on test).
+Caches, models and TSVs are gitignored and must be regenerated. `approaches/15_DENSITY_MATCHED_EVAL/src/proxy_compare.py` references a
+removed diagnostic cache (not on any production or `--verify` path). `make_submission.py` is legacy (packages only the baseline code).

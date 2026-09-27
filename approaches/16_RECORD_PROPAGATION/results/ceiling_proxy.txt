@@ -1,6 +1,0 @@
-FINAL_V2 (no oracle)                                       plain 0.986073  LB-proxy 0.982344
-oracle: address-present, Stage-2 decisions on top-1 only   plain 0.991129  LB-proxy 0.989064
-oracle: address-present, everything within top-10          plain 0.991596  LB-proxy 0.989532
-oracle: address-present, everything incl. retrieval        plain 0.992730  LB-proxy 0.990666
-oracle: all decisions on reachable (top-10) records        plain 0.995485  LB-proxy 0.993532
-oracle: everything (perfect)                               plain 0.999397  LB-proxy 0.997445

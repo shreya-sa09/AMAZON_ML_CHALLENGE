@@ -7,9 +7,10 @@ Proxy = Exp 15 density-matched estimate (spread decoys k=2.4, minus 0.0019) — 
 |---|---|---:|---:|---:|---:|
 | Approach 02 @0.50 | `02_STAGE2_CROSSFIT_RUNNERUP/output` | 0.985908 | ≈0.9779 | 0.977984 | — |
 | FINAL_HN_ONLY @0.70 | `FINAL_HN_ONLY/output` | 0.986268 | 0.981442 | 0.981172 | +0.003188 |
-| **FINAL_V4_ANCHOR_CHAR4** | `FINAL_V4_ANCHOR_CHAR4/output` | **0.988200** / 0.988251 | 0.985049 / 0.985097 | **0.982899** | **+0.001727** |
+| FINAL_V4_ANCHOR_CHAR4 | `FINAL_V4_ANCHOR_CHAR4/output` | 0.988200 / 0.988251 | 0.985049 / 0.985097 | 0.982899 | +0.001727 |
+| **FINAL_V5_CHAR8** | `FINAL_V5_CHAR8/output` | **0.988391** / 0.988417 | 0.985321 | **0.983271** | **+0.000372** |
 
-**Current real baseline: 0.982899 (FINAL_V4_ANCHOR_CHAR4).**
+**Current real baseline: 0.983271 (FINAL_V5_CHAR8).**
 
 Notes
 - The proxy matched the first two submissions within 0.0003 but overstated FINAL_V4's gain ~2×; the anchor-sibling
