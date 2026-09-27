@@ -1,0 +1,13 @@
+{
+  "char_p_max_abs_diff_vs_exp17": 0.0,
+  "char_p_mean_abs_diff": 0.0,
+  "plain_u0.7": 0.9867258660571283,
+  "plain_ef05": 0.9866301732069505,
+  "lb_proxy_ef05": 0.9831030613380278,
+  "expected": {
+    "plain_u0.7": 0.986726,
+    "plain_ef05": 0.98663,
+    "lb_proxy_ef05": 0.983103
+  },
+  "runtime_sec": 73
+}

@@ -1,0 +1,12 @@
+{
+  "approach": "FINAL_V3_CHAR_EF05",
+  "architecture": "Approach 02 Stage-2 + Exp 10 house-number + Exp 11 address token odds + Exp 17 cross-fitted char-level pair model score; Exp 18 expected-F0.5 per-S1 subset selection",
+  "retrieval": "unchanged shared cache (test_cands / test_scored / test_best)",
+  "stage2_features": "Approach 02 base 103 + hn 6 + ate 6 + char_p 1 = 116",
+  "char_model": {"epochs": 2, "batch": 2048, "lr": 0.002, "seed": 42, "cross_fit": "A on h0 -> h1 + test, B on h1 -> h0 + test, test = mean"},
+  "decision": {"rule": "expected-F0.5 prefix per S1 vs empty set", "calibration_odds_multiplier": 0.5},
+  "lgbm": "identical to approaches/02_STAGE2_CROSSFIT_RUNNERUP/config/config.json (seed 42)",
+  "validation": {"plain_u0.7": 0.986726, "plain_ef05": 0.98663, "lb_proxy_ef05": 0.983103, "lb_proxy_ef05_seed7": 0.983126,
+                 "reference_FINAL_HN_ONLY_lb_proxy": 0.981442, "reference_FINAL_HN_ONLY_leaderboard": 0.981172},
+  "excluded": ["sibling evidence (test shift)", "France normalization (unverifiable)", "raw style", "decoy weighting", "larger K"]
+}
