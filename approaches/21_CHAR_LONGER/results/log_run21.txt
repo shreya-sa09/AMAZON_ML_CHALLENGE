@@ -1,0 +1,43 @@
+[   113s]   epoch 1 step 200/1876 loss 0.5987
+[   157s]   epoch 1 step 400/1876 loss 0.4878
+[   172s] epoch 1 mean loss 0.4604
+[   201s]   epoch 2 step 600/1876 loss 0.2674
+[   247s]   epoch 2 step 800/1876 loss 0.2521
+[   277s] epoch 2 mean loss 0.2438
+[   291s]   epoch 3 step 1000/1876 loss 0.2071
+[   335s]   epoch 3 step 1200/1876 loss 0.2043
+[   380s]   epoch 3 step 1400/1876 loss 0.2009
+[   381s] epoch 3 mean loss 0.2007
+[   938s]   epoch 4 step 1600/1876 loss 0.1841
+[   982s]   epoch 4 step 1800/1876 loss 0.1833
+[   999s] epoch 4 mean loss 0.1830
+[  1276s] char4 A: 1216s; val AUC 0.97565
+[  1307s]   epoch 1 step 200/1880 loss 0.5928
+[  1338s]   epoch 1 step 400/1880 loss 0.4789
+[  1348s] epoch 1 mean loss 0.4530
+[  1368s]   epoch 2 step 600/1880 loss 0.2755
+[  1399s]   epoch 2 step 800/1880 loss 0.2589
+[  1420s] epoch 2 mean loss 0.2496
+[  1429s]   epoch 3 step 1000/1880 loss 0.2158
+[  1460s]   epoch 3 step 1200/1880 loss 0.2084
+[  1490s]   epoch 3 step 1400/1880 loss 0.2041
+[  1492s] epoch 3 mean loss 0.2040
+[  1521s]   epoch 4 step 1600/1880 loss 0.1869
+[  1551s]   epoch 4 step 1800/1880 loss 0.1852
+[  1564s] epoch 4 mean loss 0.1851
+[  1807s] char4 B: 531s; val AUC 0.97532
+[  1808s] char4-only AUC val 0.97758 (2-epoch: 0.96307)
+[1000]	es's binary_logloss: 0.0616356
+[  2015s] fit model_R7_s42.txt: best_iteration 1785, 205s
+[1000]	es's binary_logloss: 0.0612468
+[2000]	es's binary_logloss: 0.0605279
+[  2248s] fit model_R7_s7.txt: best_iteration 2001, 223s
+[  2270s] R6_s42: {"plain_ef05": 0.987935, "proxy_ef05": 0.984746, "proxy_ef05_k1.9": 0.985196}
+[  2276s] R6_s7: {"plain_ef05": 0.987955, "proxy_ef05": 0.984741, "proxy_ef05_k1.9": 0.985211}
+[  2283s] R7_s42: {"plain_ef05": 0.9882, "proxy_ef05": 0.985049, "proxy_ef05_k1.9": 0.985484}
+[  2289s] R7_s7: {"plain_ef05": 0.988251, "proxy_ef05": 0.985097, "proxy_ef05_k1.9": 0.985531}
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\21_CHAR_LONGER\src\run21.py:115: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  X = pl.concat([X, hn_features(pt_), ate.apply(pt_, te)], how="horizontal").join(pl.read_parquet(E19 / "feat_asib_test.parquet"), on="q_idx", how="left", maintain_order="left")
+[  2554s] shift val: {'R6': 199837, 'R7': 200211, 'R7_vs_R6_pct': 0.18715252931138515}
+[  2675s] shift test: {'R6': 828530, 'R7': 823775, 'R7_vs_R6_pct': -0.5739080057451162}
