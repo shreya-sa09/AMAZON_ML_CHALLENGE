@@ -1,0 +1,34 @@
+[     0s] redirected outputs -> C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_CANDIDATE_VERIFY\output; cache -> C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_CANDIDATE_VERIFY\cache
+[     0s] FINAL FULL run; threshold 0.7; 117 features
+[    30s] train: hn + sib features for 2,403,367 rows
+[500]	es's binary_logloss: 0.0864586
+[1000]	es's binary_logloss: 0.0823603
+[1500]	es's binary_logloss: 0.0805525
+[2000]	es's binary_logloss: 0.0795005
+[2500]	es's binary_logloss: 0.0788566
+[3000]	es's binary_logloss: 0.0784989
+[3500]	es's binary_logloss: 0.0782263
+[   425s] final model final_model.txt: best_iteration 3869
+[   470s] test: hn + sib features for 3,388,375 rows
+[   749s] test band rows scored 3,388,375; matched records 6,058,285
+[   827s] {
+  "threshold": 0.7,
+  "smoke": false,
+  "n_features": 117,
+  "best_iteration": 3869,
+  "test_band_rows": 3388375,
+  "matched_records": 6058285,
+  "approach02_matched_records_same_threshold": 5847663,
+  "newly_accepted_vs_a02": 230440,
+  "no_longer_accepted_vs_a02": 19818,
+  "s1_rows": 1732544,
+  "s1_with_match": 1635513,
+  "s1_with_candidates": 1732538,
+  "per_country": {
+    "India": 2761780,
+    "US": 2381052,
+    "France": 915453
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_CANDIDATE_VERIFY\\output",
+  "runtime_sec": 827
+}
