@@ -1,0 +1,5 @@
+[    41s] ATE pool rows 7,428,519
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V5_CHAR8\src\final_run.py:115: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  V = pl.concat([V, hn_features(p), ate.apply(p, te_all), pl.DataFrame({"char_p": cp.astype(np.float32)}), av], how="horizontal")
+[    74s] VERIFY {"char_p_max_abs_diff_vs_exp21": 0.0, "char_p_mean_abs_diff": 0.0, "asib_max_abs_diff_vs_exp19": 0.0, "plain_u0.7": 0.9884340819244871, "plain_ef05": 0.9883911318234699, "lb_proxy_ef05": 0.9853207075312844, "expected": {"plain_ef05": 0.9882, "lb_proxy_ef05": 0.985049}, "runtime_sec": 74}

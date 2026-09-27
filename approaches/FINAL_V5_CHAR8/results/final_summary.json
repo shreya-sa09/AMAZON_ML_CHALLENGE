@@ -1,0 +1,39 @@
+{
+  "decision": {
+    "rule": "expected-F0.5 prefix per S1 vs empty set",
+    "calibration_odds_multiplier": 0.5
+  },
+  "smoke": false,
+  "n_features": 122,
+  "best_iteration": 1760,
+  "test_band_rows": 3388375,
+  "matched_records": 5826691,
+  "test_shift_gate": {
+    "hn_only_uniform0.7": 5850201,
+    "v4_uniform0.7": 5862290,
+    "v4_ef05": 5826691,
+    "char_p_mean_by_country_test_band": {
+      "India": 0.30784136056900024,
+      "France": 0.268301397562027,
+      "US": 0.21402180194854736
+    },
+    "char_p_corr_with_p1_by_country": {
+      "France": 0.6638968586921692,
+      "US": 0.8474724292755127,
+      "India": 0.8390410542488098
+    },
+    "v3_file_ef05_accepted": 5801265,
+    "model_shift_pct_uniform0.7": 0.20664247262616176,
+    "ef05_vs_hn_only_pct": -0.40186653415840157
+  },
+  "s1_rows": 1732544,
+  "s1_with_match": 1633519,
+  "s1_with_candidates": 1732538,
+  "per_country": {
+    "India": 2721817,
+    "US": 2242660,
+    "France": 862214
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_V5_CHAR8\\output",
+  "runtime_sec": 2208
+}
