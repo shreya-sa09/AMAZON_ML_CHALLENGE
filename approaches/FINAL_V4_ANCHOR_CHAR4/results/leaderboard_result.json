@@ -1,0 +1,16 @@
+{
+  "approach": "FINAL_V4_ANCHOR_CHAR4",
+  "submission_status": "submitted and scored",
+  "leaderboard_f05": 0.982899,
+  "previous_best_leaderboard_f05": 0.981172,
+  "previous_best_approach": "FINAL_HN_ONLY",
+  "improvement": 0.001727,
+  "validation_f05": {"seed42": 0.988200, "seed7": 0.988251},
+  "lb_proxy": {"seed42": 0.985049, "seed7": 0.985097},
+  "test_matched_records": 5830482,
+  "official_validator": "PASS",
+  "validator_check_ids": "PASS",
+  "submitted_file": "approaches/FINAL_V4_ANCHOR_CHAR4/output/matching_results.tsv",
+  "code_commit": "d32e8618fb41c04652aa62c4cbdcfaccc87c5904",
+  "note": "Best confirmed leaderboard result; use 0.982899 as the real baseline for future experiments."
+}

@@ -1,6 +1,23 @@
-# FINAL_V4_ANCHOR_CHAR4 — candidate submission (not yet submitted)
+# FINAL_V4_ANCHOR_CHAR4 — submitted, best confirmed leaderboard result
 
-Branch: `final/v4`. Rollbacks: `FINAL_HN_ONLY` (leaderboard 0.981172), `FINAL_V3_CHAR_EF05`.
+Branch: `final/v4` (submitted run, commit d32e861); score record on `final/v4-score-0.982899`.
+Rollbacks: `FINAL_HN_ONLY` (leaderboard 0.981172), `FINAL_V3_CHAR_EF05`.
+
+## ACTUAL LEADERBOARD RESULT
+| | |
+|---|---|
+| **Score (macro F0.5, Amazon leaderboard)** | **0.982899** |
+| Previous best (FINAL_HN_ONLY) | 0.981172 |
+| Improvement | **+0.001727** |
+| Validation F0.5 (seed 42 / seed 7) | 0.988200 / 0.988251 |
+| Leaderboard proxy (seed 42 / seed 7) | 0.985049 / 0.985097 (overstated the gain ~2×: +0.0036 predicted vs +0.0017 actual) |
+| Test matched records | 5,830,482 |
+| Official validator | PASS |
+| Validator `--check-ids` | PASS |
+| Submission status | submitted and scored |
+
+This is the best confirmed leaderboard result in the project and the real baseline for future experiments.
+The submitted file is `output/matching_results.tsv` from the run documented below (code/config unchanged).
 
 ## Pipeline
 Unchanged retrieval + Stage 1 → Stage 2 LightGBM (Approach 02 recipe), 122 features = Approach 02's 103
