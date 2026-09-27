@@ -1,0 +1,15 @@
+{
+  "sample_size": 200,
+  "method": "fixed seed sample; flags may overlap and are observations, not causal labels",
+  "flag_counts": {
+    "missing_query_address": 135,
+    "duplicate_s1_core_name": 147,
+    "common_s1_core_name_ge10": 119,
+    "low_name_similarity_lt60": 57,
+    "house_number_conflict": 24,
+    "low_name_token_set_lt60": 45,
+    "indic_query": 8,
+    "numeric_name_token_difference": 4,
+    "low_address_similarity_lt60": 1
+  }
+}

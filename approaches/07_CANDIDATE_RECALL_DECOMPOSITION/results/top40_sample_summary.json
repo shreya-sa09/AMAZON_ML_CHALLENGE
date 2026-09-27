@@ -1,0 +1,21 @@
+{
+  "sample_size": 2000,
+  "sampling": "1000 fixed-seed saved top-10 misses per country",
+  "device": "cuda",
+  "top40_recovered": 621,
+  "top10_recovered_on_rerun": 0,
+  "top40_to_top10_loss": 621,
+  "by_country": {
+    "US": {
+      "n": 1000,
+      "top40_recovered": 333,
+      "top10_recovered_on_rerun": 0
+    },
+    "India": {
+      "n": 1000,
+      "top40_recovered": 288,
+      "top10_recovered_on_rerun": 0
+    }
+  },
+  "runtime_sec": 45
+}

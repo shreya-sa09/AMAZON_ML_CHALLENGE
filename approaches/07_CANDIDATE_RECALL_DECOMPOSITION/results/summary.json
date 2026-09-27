@@ -1,0 +1,123 @@
+{
+  "definitions": {
+    "top1": "baseline LightGBM highest-scored S1, not cosine rank 1",
+    "stage2": "Approach 02 validation model for fold B in band; baseline p1 outside band; threshold 0.70",
+    "note": "Stage-2 validation scores exist for fold B only; full-corpus Stage-2 recall is unavailable."
+  },
+  "ground_truth_links": 7638365,
+  "queries_evaluated": 7638365,
+  "singleton_s1": 123247,
+  "multi_match_s1": 1964417,
+  "total_s1": 2206821,
+  "groups": {
+    "all": {
+      "links": 7638365,
+      "top10": 7538403,
+      "retrieval_rank1": 7412895,
+      "model_top1": 7477824,
+      "top10_recall": 0.9869131679358083,
+      "top1_recall": 0.978982282203063,
+      "top10_to_top1_loss": 60579
+    },
+    "validation": {
+      "links": 1529739,
+      "top10": 1509811,
+      "retrieval_rank1": 1484765,
+      "model_top1": 1496833,
+      "top10_recall": 0.9869729411357101,
+      "top1_recall": 0.9784891409580327,
+      "top10_to_top1_loss": 12978,
+      "stage2_scored_band_rows": 238345,
+      "accepted_070": 1477771,
+      "accepted_recall_070": 0.9660281917372833,
+      "top1_to_stage2_loss_070": 19062,
+      "in_band_stage2_rejected_correct_top1_070": 18909,
+      "outside_band_baseline_rejected_correct_top1_070": 153,
+      "accepted_050": 1483085,
+      "accepted_recall_050": 0.9695019869402558,
+      "top1_to_stage2_loss_050": 13748,
+      "in_band_stage2_rejected_correct_top1_050": 13595,
+      "outside_band_baseline_rejected_correct_top1_050": 153
+    },
+    "US": {
+      "links": 4578522,
+      "top10": 4529240,
+      "retrieval_rank1": 4464211,
+      "model_top1": 4487945,
+      "top10_recall": 0.9892362644539002,
+      "top1_recall": 0.980216978317457,
+      "top10_to_top1_loss": 41295
+    },
+    "India": {
+      "links": 3059843,
+      "top10": 3009163,
+      "retrieval_rank1": 2948684,
+      "model_top1": 2989879,
+      "top10_recall": 0.9834370586987633,
+      "top1_recall": 0.9771347745619628,
+      "top10_to_top1_loss": 19284
+    },
+    "address_present": {
+      "links": 7301347,
+      "top10": 7272692,
+      "retrieval_rank1": 7224620,
+      "model_top1": 7262665,
+      "top10_recall": 0.9960753817069645,
+      "top1_recall": 0.9947020734667179,
+      "top10_to_top1_loss": 10027
+    },
+    "address_missing": {
+      "links": 337018,
+      "top10": 265711,
+      "retrieval_rank1": 188275,
+      "model_top1": 215159,
+      "top10_recall": 0.7884178293147547,
+      "top1_recall": 0.6384199063551502,
+      "top10_to_top1_loss": 50552
+    },
+    "val_US": {
+      "links": 916433,
+      "top10": 906572,
+      "model_top1": 897771,
+      "accepted_070": 885481,
+      "top10_recall": 0.9892398025824037,
+      "top1_recall": 0.9796362636439325,
+      "accepted_recall_070": 0.9662255724095488
+    },
+    "val_India": {
+      "links": 613306,
+      "top10": 603239,
+      "model_top1": 599062,
+      "accepted_070": 592290,
+      "top10_recall": 0.9835856815358076,
+      "top1_recall": 0.9767750519316621,
+      "accepted_recall_070": 0.9657332555037779
+    },
+    "val_address_present": {
+      "links": 1462172,
+      "top10": 1456530,
+      "model_top1": 1454326,
+      "accepted_070": 1441597,
+      "top10_recall": 0.996141356830797,
+      "top1_recall": 0.9946340102258832,
+      "accepted_recall_070": 0.9859284680598452
+    },
+    "val_address_missing": {
+      "links": 67567,
+      "top10": 53281,
+      "model_top1": 42507,
+      "accepted_070": 36174,
+      "top10_recall": 0.7885654239495612,
+      "top1_recall": 0.6291088845146299,
+      "accepted_recall_070": 0.5353796971894564
+    }
+  },
+  "misses": {
+    "total": 99962,
+    "address_missing": 71307,
+    "has_indic": 3218,
+    "US": 49282,
+    "India": 50680
+  },
+  "top40_full_corpus": "NOT AVAILABLE: approximate top-40 lists were not cached"
+}
