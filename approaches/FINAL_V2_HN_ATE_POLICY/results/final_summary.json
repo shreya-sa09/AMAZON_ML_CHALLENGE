@@ -1,0 +1,30 @@
+{
+  "policy": {
+    "conf": 0.9,
+    "t_alone": 0.7,
+    "t_group": 0.85,
+    "rule": "threshold = t_group if another record points to the same S1 with p_final >= conf, else t_alone"
+  },
+  "smoke": false,
+  "n_features": 115,
+  "best_iteration": 4579,
+  "test_band_rows": 3388375,
+  "matched_records": 5795889,
+  "test_shift_gate": {
+    "hn_only_uniform0.7": 5850201,
+    "v2_uniform0.7": 5841745,
+    "v2_policy": 5795889,
+    "ate_shift_pct_uniform0.7": -0.14454204223068867,
+    "policy_vs_hn_only_pct": -0.9283783582820448
+  },
+  "s1_rows": 1732544,
+  "s1_with_match": 1632638,
+  "s1_with_candidates": 1732538,
+  "per_country": {
+    "India": 2707377,
+    "France": 859444,
+    "US": 2229068
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_V2_HN_ATE_POLICY\\output",
+  "runtime_sec": 738
+}
