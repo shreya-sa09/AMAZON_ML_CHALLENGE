@@ -1,0 +1,94 @@
+[     0s] FINAL_V4 FULL run; 122 features; EF0.5 c=0.5
+[     5s] ATE pool rows 9,289,132
+[    72s]   epoch 1 step 200/2348 loss 0.6035
+[   102s]   epoch 1 step 400/2348 loss 0.4914
+[   130s] epoch 1 mean loss 0.4292
+[   132s]   epoch 2 step 600/2348 loss 0.2746
+[   163s]   epoch 2 step 800/2348 loss 0.2531
+[   193s]   epoch 2 step 1000/2348 loss 0.2414
+[   220s] epoch 2 mean loss 0.2337
+[   224s]   epoch 3 step 1200/2348 loss 0.2020
+[   254s]   epoch 3 step 1400/2348 loss 0.1990
+[   285s]   epoch 3 step 1600/2348 loss 0.1959
+[   309s] epoch 3 mean loss 0.1934
+[   315s]   epoch 4 step 1800/2348 loss 0.1781
+[   346s]   epoch 4 step 2000/2348 loss 0.1772
+[   376s]   epoch 4 step 2200/2348 loss 0.1765
+[   399s] epoch 4 mean loss 0.1763
+[   489s]   epoch 1 step 200/2352 loss 0.6023
+[   519s]   epoch 1 step 400/2352 loss 0.4917
+[   548s] epoch 1 mean loss 0.4281
+[   550s]   epoch 2 step 600/2352 loss 0.2742
+[   580s]   epoch 2 step 800/2352 loss 0.2490
+[   611s]   epoch 2 step 1000/2352 loss 0.2383
+[   637s] epoch 2 mean loss 0.2305
+[   641s]   epoch 3 step 1200/2352 loss 0.1959
+[   672s]   epoch 3 step 1400/2352 loss 0.1974
+[   702s]   epoch 3 step 1600/2352 loss 0.1933
+[   727s] epoch 3 mean loss 0.1911
+[   733s]   epoch 4 step 1800/2352 loss 0.1761
+[   763s]   epoch 4 step 2000/2352 loss 0.1756
+[   794s]   epoch 4 step 2200/2352 loss 0.1746
+[   817s] epoch 4 mean loss 0.1740
+[  1185s] char models trained and scored
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V4_ANCHOR_CHAR4\src\final_run.py:188: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  h0 = pl.concat([h0, hn_features(p0), pl.DataFrame({"char_p": c0.astype(np.float32)})], how="horizontal")
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V4_ANCHOR_CHAR4\src\final_run.py:189: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  h1 = pl.concat([h1, hn_features(p1), pl.DataFrame({"char_p": c1.astype(np.float32)})], how="horizontal")
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V4_ANCHOR_CHAR4\src\final_run.py:193: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  T = pl.concat([T, ate_crossfit(pT, T, half, te_h1, te_h0)], how="horizontal")
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V4_ANCHOR_CHAR4\src\final_run.py:194: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  T = pl.concat([T, asib.asib_features(T, pl.read_parquet(ROOT / "cache/train_best.parquet", columns=["q_idx", "s1_idx", "p1"]), qn)], how="horizontal")
+[  1210s] train rows 2,403,367 with 122 features
+[500]	es's binary_logloss: 0.0617761
+[1000]	es's binary_logloss: 0.0601497
+[1500]	es's binary_logloss: 0.0594974
+[2000]	es's binary_logloss: 0.059242
+[  1506s] final model final_model.txt: best_iteration 2117
+C:\Users\shrey\amazon-ml-challenge-2026\approaches\FINAL_V4_ANCHOR_CHAR4\src\final_run.py:199: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  X = pl.concat([X, hn_features(pt_), ate.apply(pt_, te_all), pl.DataFrame({"char_p": ((cA + cB) / 2).astype(np.float32)}),
+[  1607s] test-shift gate: {'hn_only_uniform0.7': 5850201, 'v4_uniform0.7': 5866898, 'v4_ef05': 5830482, 'char_p_mean_by_country_test_band': {'US': 0.2161129117012024, 'India': 0.3095908761024475, 'France': 0.2764454483985901}, 'char_p_corr_with_p1_by_country': {'France': 0.689720630645752, 'India': 0.8317285180091858, 'US': 0.8425643444061279}, 'v3_file_ef05_accepted': 5801265, 'model_shift_pct_uniform0.7': 0.2854089970584006, 'ef05_vs_hn_only_pct': -0.3370653418574898}
+[  1645s] {
+  "decision": {
+    "rule": "expected-F0.5 prefix per S1 vs empty set",
+    "calibration_odds_multiplier": 0.5
+  },
+  "smoke": false,
+  "n_features": 122,
+  "best_iteration": 2117,
+  "test_band_rows": 3388375,
+  "matched_records": 5830482,
+  "test_shift_gate": {
+    "hn_only_uniform0.7": 5850201,
+    "v4_uniform0.7": 5866898,
+    "v4_ef05": 5830482,
+    "char_p_mean_by_country_test_band": {
+      "US": 0.2161129117012024,
+      "India": 0.3095908761024475,
+      "France": 0.2764454483985901
+    },
+    "char_p_corr_with_p1_by_country": {
+      "France": 0.689720630645752,
+      "India": 0.8317285180091858,
+      "US": 0.8425643444061279
+    },
+    "v3_file_ef05_accepted": 5801265,
+    "model_shift_pct_uniform0.7": 0.2854089970584006,
+    "ef05_vs_hn_only_pct": -0.3370653418574898
+  },
+  "s1_rows": 1732544,
+  "s1_with_match": 1633677,
+  "s1_with_candidates": 1732538,
+  "per_country": {
+    "US": 2243117,
+    "France": 864977,
+    "India": 2722388
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_V4_ANCHOR_CHAR4\\output",
+  "runtime_sec": 1645
+}
