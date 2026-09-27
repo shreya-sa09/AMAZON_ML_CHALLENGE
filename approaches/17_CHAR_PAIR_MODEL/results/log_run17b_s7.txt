@@ -1,0 +1,5 @@
+[1000]	es's binary_logloss: 0.0902554
+[2000]	es's binary_logloss: 0.088034
+[   286s] fit model_R5_char_s7.txt: best_iteration 2801, 285s
+[   311s] R2_s7: {"plain_u0.7": 0.986313, "plain_ef05": 0.986233, "proxy_ef05": 0.982553, "proxy_ef05_k1.9": 0.983181}
+[   317s] R5_char_s7: {"plain_u0.7": 0.986766, "plain_ef05": 0.986648, "proxy_ef05": 0.983126, "proxy_ef05_k1.9": 0.983684}

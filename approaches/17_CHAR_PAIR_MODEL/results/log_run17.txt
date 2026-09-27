@@ -1,0 +1,21 @@
+[    30s] encoded h0 960,432 h1 961,250 val 534,915
+[    63s]   epoch 1 step 200/938 loss 0.5634
+[    94s]   epoch 1 step 400/938 loss 0.4556
+[   104s] epoch 1 mean loss 0.4309
+[   125s]   epoch 2 step 600/938 loss 0.2640
+[   156s]   epoch 2 step 800/938 loss 0.2540
+[   177s] epoch 2 mean loss 0.2500
+[   237s] char model A: trained+scored in 207s; val AUC 0.96214
+[   268s]   epoch 1 step 200/940 loss 0.5577
+[   299s]   epoch 1 step 400/940 loss 0.4525
+[   310s] epoch 1 mean loss 0.4302
+[   330s]   epoch 2 step 600/940 loss 0.2773
+[   361s]   epoch 2 step 800/940 loss 0.2670
+[   383s] epoch 2 mean loss 0.2627
+[   525s] char model B: trained+scored in 288s; val AUC 0.95752
+[   526s] char-only AUC: val 0.96307; train OOF 0.95995
+[1000]	es's binary_logloss: 0.0902188
+[2000]	es's binary_logloss: 0.0880837
+[   742s] fit model_R5_char.txt: best_iteration 2823, 214s
+[   772s] R2_s42: {"plain_u0.7": 0.986354, "plain_ef05": 0.986239, "proxy_ef05": 0.982578, "proxy_ef05_k1.9": 0.983195, "proxy_group": 0.982344}
+[   781s] R5_char: {"plain_u0.7": 0.986726, "plain_ef05": 0.98663, "proxy_ef05": 0.983103, "proxy_ef05_k1.9": 0.983665, "proxy_group": 0.982844}
