@@ -1,0 +1,20 @@
+{
+  "variant": "verify_final_hn_only",
+  "f05": 0.9862678998628127,
+  "precision": 0.9939611359986428,
+  "recall": 0.9678527526407094,
+  "singleton_acc": 0.9883503054989816,
+  "false_singletons": 286,
+  "accepted_pairs": 7365130,
+  "band_auc": 0.9940160510639217,
+  "band_auc_addr_present": 0.9962392887719994,
+  "band_auc_addr_missing": 0.9498759727026328,
+  "ap_rejected_correct": 11014,
+  "ap_accepted_wrong": 3526,
+  "am_rejected_correct": 6355,
+  "am_accepted_wrong": 1190,
+  "f05_India": 0.9857827403992784,
+  "f05_US": 0.9865925404857007,
+  "hn_features_identical_to_exp10_cache": true,
+  "runtime_sec": 26
+}

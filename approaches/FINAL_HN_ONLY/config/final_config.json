@@ -1,0 +1,11 @@
+{
+  "approach": "FINAL_HN_ONLY",
+  "architecture": "Approach 02 (baseline retrieval + 64 features + baseline LightGBM + Stage-2 LightGBM with edit features and cross-fitted name token odds, runner-up off) + Exp 10 house-number offset/parity features",
+  "retrieval": "unchanged: shared cache test_cands / test_scored / test_best",
+  "stage2_features": "Approach 02 base 103 + hn 6 (hn_absd1, hn_par1, hn_absd2, hn_par2, hn_bestd, hn_best_par) = 109",
+  "threshold": 0.70,
+  "band": [0.002, 0.995],
+  "lgbm": "identical to approaches/02_STAGE2_CROSSFIT_RUNNERUP/config/config.json (seed 42, max 8000 rounds, early stopping 100)",
+  "validation_f05": 0.986268,
+  "excluded": ["Exp 13/14 sibling evidence (test acceptance shift ~25% vs ~1.4% on validation)", "Exp 11 address token odds (seed-unstable)", "Exp 12 raw style", "Exp 03/05 France normalization (no validation evidence)", "Exp 06", "Exp 08"]
+}

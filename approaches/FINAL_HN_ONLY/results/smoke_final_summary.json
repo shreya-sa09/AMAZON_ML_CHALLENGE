@@ -1,0 +1,21 @@
+{
+  "threshold": 0.7,
+  "smoke": true,
+  "n_features": 109,
+  "best_iteration": 30,
+  "test_band_rows": 50000,
+  "matched_records": 10986,
+  "approach02_matched_records_same_threshold": 11499,
+  "newly_accepted_vs_a02": 770,
+  "no_longer_accepted_vs_a02": 1283,
+  "s1_rows": 1732544,
+  "s1_with_match": 10945,
+  "s1_with_candidates": 388827,
+  "per_country": {
+    "India": 5463,
+    "France": 1944,
+    "US": 3579
+  },
+  "output_dir": "C:\\Users\\shrey\\amazon-ml-challenge-2026\\approaches\\FINAL_HN_ONLY\\results\\smoke",
+  "runtime_sec": 4
+}
