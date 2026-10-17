@@ -114,7 +114,7 @@ cd ../.. && .venv/Scripts/python utils/validate_submission.py --matching output/
 The full run takes about 4–5 hours on the hardware above. Candidate generation and feature
 computation take most of that time.
 
-Team Gamma
-Shreya Salunkhe
-Piu Maji
-Sakshi Harlekar
+Team Gamma:
+*Shreya Salunkhe
+*Piu Maji
+*Sakshi Harlekar
