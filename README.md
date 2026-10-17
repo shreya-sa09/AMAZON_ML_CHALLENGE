@@ -114,9 +114,7 @@ cd ../.. && .venv/Scripts/python utils/validate_submission.py --matching output/
 The full run takes about 4–5 hours on the hardware above. Candidate generation and feature
 computation take most of that time.
 
-## Remaining to-do
-* Upload `output/matching_results.tsv` to the leaderboard portal.
-* Fill in team name, members and date in `Documentation_template.md`, then run `make_submission.py`.
-* Optional: one clean end-to-end run of `run_all.py`. The stages were run individually. The
-  Indic-script candidates were produced with the equivalent `candidates.patch_queries` step rather
-  than a full regeneration.
+Team Gamma
+Shreya Salunkhe
+Piu Maji
+Sakshi Harlekar
